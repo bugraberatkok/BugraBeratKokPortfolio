@@ -1,0 +1,88 @@
+import styles from './Projects.module.css';
+
+export default function Projects() {
+  const projects = [
+    {
+      title: "Focus — Custom 2D Game Engine",
+      description: "A modular 2D game engine built from scratch in C++, powering two playable games through reusable rendering, physics, input, and scene systems.",
+      tags: ["C++", "SDL", "OpenGL", "OOP"],
+      link: "#",
+      github: "https://github.com/bugraberatkok/Focus-GameEngine-and-Two-Playable-Games"
+    },
+    {
+      title: "Doomsday — 3D Space Runner",
+      description: "A 3D space runner and shooter featuring custom geometry, dynamic difficulty, object pooling, collision detection, and smooth cinematic camera movement.",
+      tags: ["Java", "Processing", "P3D", "OOP"],
+      link: "#",
+      github: "https://github.com/bugraberatkok/ProcessingGameProject"
+    },
+    {
+      title: "Football Analyzer AI",
+      description: "A full-stack pre-match analysis platform that collects real-time football statistics and uses Gemini AI to generate structured tactical reports.",
+      tags: ["Java", "Spring Boot", "React", "Gemini API", "RapidAPI"],
+      link: "#",
+      github: "https://github.com/bugraberatkok/football-analyzer-ai"
+    },
+    {
+      title: "FitTrack — Fitness & Nutrition Dashboard",
+      description: "A secure full-stack dashboard for tracking daily meals, calories, workouts, exercise progress, and weekly training consistency.",
+      tags: ["Java", "Spring Boot", "React", "H2"],
+      link: "#",
+      github: "https://github.com/bugraberatkok/fitness-web-app"
+    },
+    {
+      title: "The Lost & Found Pet System",
+      description: "A desktop application for registering, managing, and tracking lost or found pets through a graphical interface with persistent local storage.",
+      tags: ["Python", "Tkinter", "SQLite", "Git"],
+      link: "#",
+      github: "https://github.com/bengisusagir/TheLostFoundPetSystem"
+    },
+    {
+      title: "Instrument Duel",
+      description: "A browser-based rhythm and reaction game built around musical timing, responsive input, audio-driven mechanics, and a custom JavaScript game loop.",
+      tags: ["JavaScript", "HTML5", "CSS3", "MIDI"],
+      link: "https://bugraberatkok.github.io/Instrument-Duel/",
+      github: "https://github.com/bugraberatkok/Instrument-Duel"
+    }
+  ];
+
+  return (
+    <section id="projects" className={styles.projectsSection}>
+      <div className="container">
+        <h2 className="section-title">Featured Projects</h2>
+
+        <div className={styles.grid}>
+          {projects.map((project, index) => (
+            <div key={index} className={`${styles.card} glass`}>
+              <div className={styles.cardHeader}>
+                <div className={styles.folderIcon}>
+                  {project.title.includes("Game") || project.title.includes("Duel") || project.title.includes("Runner") ? (
+                    <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><polygon points="5 3 19 3 22 12 22 21 2 21 2 12 5 3"></polygon><line x1="2" y1="12" x2="22" y2="12"></line><line x1="9" y1="16" x2="15" y2="16"></line><circle cx="6.5" cy="16.5" r="1.5"></circle><circle cx="17.5" cy="16.5" r="1.5"></circle></svg>
+                  ) : project.title.includes("Football") || project.title.includes("FitTrack") ? (
+                    <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                  ) : (
+                    <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                  )}
+                </div>
+                <div className={styles.projectLinks}>
+                  <a href={project.github} target="_blank" rel="noreferrer" aria-label="GitHub Link">
+                    <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><title>GitHub</title><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  </a>
+                </div>
+              </div>
+              <h3 className={styles.projectTitle}>{project.title}</h3>
+              <p className={styles.projectDescription}>
+                {project.description}
+              </p>
+              <ul className={styles.projectTechList}>
+                {project.tags.map((tag, i) => (
+                  <li key={i}>{tag}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
