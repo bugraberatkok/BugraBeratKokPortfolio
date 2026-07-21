@@ -1,36 +1,29 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Buğra Berat Kök - Personal Portfolio
 
-## Getting Started
+A modern, fast, and responsive personal portfolio website designed to showcase my projects, experience, and skills. Built with a sleek dark mode aesthetic, glassmorphism UI components, and smooth scroll navigation.
 
-First, run the development server:
+**[🚀 View Live Portfolio](https://bugra-berat-kok-portfolio.vercel.app/)**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 💻 Tech Stack
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Framework**: [Next.js](https://nextjs.org/) (App Router)
+- **Library**: [React](https://reactjs.org/)
+- **Styling**: Vanilla CSS with CSS Modules
+- **Deployment**: Vercel
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## ✨ Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Responsive Design:** Optimized for both desktop and mobile devices.
+- **Modern UI:** "Dark Mode" styling with glassmorphism components and glowing hover effects.
+- **Single Page Navigation:** Smooth scrolling to different sections (About, Projects, Experience, Contact).
+- **Interactive Project Cards:** Direct links to GitHub repositories for my featured work (including Game Engines, AI, and Full-Stack applications).
+- **Organized Experience & Certificates:** Built with tabs and accordions for a clean, accessible layout without excessive scrolling.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+## 📬 Contact
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+I am a fourth-year Software Engineering student open to internship, junior developer, and software testing opportunities. Feel free to reach out to me!
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Email**: [kokbugraberat@gmail.com](mailto:kokbugraberat@gmail.com)
+- **LinkedIn**: [linkedin.com/in/bugraberatkok](https://www.linkedin.com/in/bugraberatkok/)
+- **GitHub**: [github.com/bugraberatkok](https://github.com/bugraberatkok)
