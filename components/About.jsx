@@ -3,7 +3,7 @@ import styles from './About.module.css';
 export default function About() {
   const skills = [
     "Java", "Spring Boot", "HTML/CSS", "JavaScript",
-    "C#", "Unity", "Postman", "Git & Github", "SQL", "REST APIs", "Software Testing", "Unreal Engine Blueprints", "Game Engine Fundamentals"
+    "C#", "Unity", "Postman", "Git & Github", "SQL", "REST APIs", "Software Testing", "Unreal Engine Blueprints", "Game Engine Development"
   ];
 
   return (
