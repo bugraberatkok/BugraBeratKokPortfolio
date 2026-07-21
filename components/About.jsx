@@ -1,6 +1,10 @@
+"use client";
 import styles from './About.module.css';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function About() {
+  const { t } = useLanguage();
+  
   const skills = [
     "Java", "Spring Boot", "HTML/CSS", "JavaScript",
     "C#", "Unity", "Postman", "Git & Github", "SQL", "REST APIs", "Software Testing", "Unreal Engine Blueprints", "Game Engine Development"
@@ -9,18 +13,16 @@ export default function About() {
   return (
     <section id="about" className={styles.aboutSection}>
       <div className={`container ${styles.aboutContainer}`}>
-        <h2 className="section-title">About Me</h2>
+        <h2 className="section-title">{t.about.title}</h2>
 
         <div className={styles.content}>
           <div className={styles.textContent}>
-            <p className={styles.paragraph}>
-              Hello! I'm Buğra, a fourth-year Software Engineering student who enjoys understanding how systems work, turning ideas into functional projects, and finding practical solutions to technical problems.            </p>
-            <p className={styles.paragraph}>
-              My experience covers backend development, web applications, software testing, databases, and game technologies. I am currently strengthening my skills through project-based training, QA practices, and personal projects while exploring areas such as test automation, game development, and backend technologies.            </p>
+            <p className={styles.paragraph}>{t.about.p1}</p>
+            <p className={styles.paragraph}>{t.about.p2}</p>
           </div>
 
           <div className={styles.skillsWrapper}>
-            <h3 className={styles.skillsTitle}>My Professional Skills and Experiences</h3>
+            <h3 className={styles.skillsTitle}>{t.about.skillsTitle}</h3>
             <ul className={styles.skillsList}>
               {skills.map((skill, index) => (
                 <li key={index} className={styles.skillItem}>{skill}</li>

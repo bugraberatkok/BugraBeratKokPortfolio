@@ -1,13 +1,17 @@
+"use client";
 import styles from './Contact.module.css';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function Contact() {
+  const { t } = useLanguage();
+
   return (
     <section id="contact" className={styles.contactSection}>
       <div className={`container ${styles.container}`}>
         <div className={styles.textWrap}>
-          <h2 className="section-title">Get In Touch</h2>
+          <h2 className="section-title">{t.contact.title}</h2>
           <p className={styles.description}>
-            I'm open to internship, junior developer, and software testing opportunities. Feel free to contact me through email or LinkedIn.
+            {t.contact.description}
           </p>
 
           <div className={styles.socials}>
