@@ -11,7 +11,7 @@ export default function Education() {
         <h2 className="section-title">{t.education.title}</h2>
         <div className={styles.grid}>
           {t.education.items.map((item) => (
-            <article key={item.degree} className={`${styles.card} glass`}>
+            <article key={item.degree} className={styles.card}>
               <p className={styles.institution}>{item.institution}</p>
               <h3 className={styles.degree}>{item.degree}</h3>
               <p className={styles.date}>{item.date}</p>
@@ -23,7 +23,7 @@ export default function Education() {
           <h3>{t.education.languagesTitle}</h3>
           <ul className={styles.languageList}>
             {t.education.languages.map((language) => (
-              <li key={language} className="glass">{language}</li>
+              <li key={language}>{language}</li>
             ))}
           </ul>
         </div>

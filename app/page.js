@@ -12,15 +12,13 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <About />
         <Projects />
+        <About />
         <Experience />
         <Education />
         <Contact />
       </main>
-      <footer style={{ textAlign: 'center', padding: '2rem', color: 'var(--text-muted)', borderTop: '1px solid var(--glass-border)' }}>
-        <p>&copy; {new Date().getFullYear()} Bugra Berat Kok. Built with Next.js.</p>
-      </footer>
+      <footer><div className="container"><p>&copy; {new Date().getFullYear()} Buğra Berat Kök</p><a href="https://github.com/bugraberatkok" target="_blank" rel="noreferrer">GitHub</a></div></footer>
     </>
   );
 }

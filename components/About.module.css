@@ -1,88 +1,54 @@
 .aboutSection {
-  background-color: rgba(0, 0, 0, 0.2);
+  background: #141a24;
 }
-
-.aboutContainer {
-  display: flex;
-  flex-direction: column;
-}
-
 .content {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: center;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 80px;
+  align-items: start;
 }
-
 .textContent {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 24px;
 }
-
 .paragraph {
   color: var(--text-muted);
-  font-size: 1.1rem;
-  line-height: 1.8;
+  font-size: 1rem;
+  max-width: 65ch;
 }
-
-.skillsWrapper {
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
-  border-radius: 16px;
-  padding: 2.5rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-}
-
 .skillsTitle {
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
-  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 24px;
 }
-
+.skillGroup {
+  border-top: 1px solid var(--line);
+  padding: 18px 0;
+}
+.groupTitle {
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
 .skillsList {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
   list-style: none;
+  gap: 8px 16px;
 }
-
-.skillGroup + .skillGroup {
-  margin-top: 1.5rem;
-}
-
-.groupTitle {
-  color: var(--accent);
-  font-size: 0.95rem;
-  margin-bottom: 0.75rem;
-}
-
-@media (max-width: 480px) {
-  .skillsWrapper {
-    padding: 1.5rem;
-  }
-}
-
 .skillItem {
-  background: rgba(255, 255, 255, 0.05);
-  color: var(--text-color);
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  font-size: 0.9rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: all 0.3s ease;
+  color: var(--text-muted);
+  font-size: 0.85rem;
 }
-
-.skillItem:hover {
-  background: rgba(255, 255, 255, 0.1);
-  transform: translateY(-2px);
-  border-color: var(--accent);
-  color: var(--accent);
-}
-
 @media (max-width: 900px) {
   .content {
+    gap: 40px;
+  }
+}
+@media (max-width: 700px) {
+  .content {
     grid-template-columns: 1fr;
-    gap: 3rem;
   }
 }

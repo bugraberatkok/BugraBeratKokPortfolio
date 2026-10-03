@@ -5,29 +5,31 @@ import { useLanguage } from '../context/LanguageContext';
 
 export default function Hero() {
   const { t } = useLanguage();
-
   return (
     <section id="hero" className={styles.heroSection}>
-      <div className={`container ${styles.heroContent}`}>
-        <div className={styles.photoContainer}>
-          <div className={styles.photoPlaceholder}>
-            <Image src="/hero/profile.jpg" alt={t.hero.photoAlt} fill sizes="(max-width: 900px) 250px, 320px" preload />
+      <div className="container">
+        <div className={styles.heroContent}>
+          <div>
+            <p className={styles.greeting}>{t.hero.greeting}</p>
+            <h1 className={styles.name} aria-label={t.hero.name}>Buğra Berat<span>Kök<span className={styles.dot} aria-hidden="true">.</span></span></h1>
+            <p className={styles.title}>{t.hero.title}</p>
+            <p className={styles.tagline}>{t.hero.tagline}</p>
+            <div className={styles.actions}>
+              <a href="#projects" className="btn btn-primary">{t.hero.viewWork} <span aria-hidden="true">↘</span></a>
+              <a href="/resume.pdf" target="_blank" rel="noreferrer" className={styles.resume}>{t.hero.downloadResume} <span aria-hidden="true">↗</span></a>
+            </div>
           </div>
+          <figure className={styles.portrait}>
+            <div className={styles.photo}>
+              <Image src="/hero/profile.jpg" alt={t.hero.photoAlt} fill sizes="(max-width: 700px) 80vw, 380px" preload />
+            </div>
+            <figcaption><span>Ailways</span><span>{t.hero.currentRole}</span></figcaption>
+          </figure>
         </div>
-
-        <div className={styles.textContent}>
-          <h2 className={styles.greeting}>{t.hero.greeting}</h2>
-          <h1 className={styles.name}>{t.hero.name}</h1>
-          <h3 className={styles.title}>{t.hero.title}</h3>
-          <p className={styles.tagline}>{t.hero.tagline}</p>
-          <div className={styles.actions}>
-            <a href="#projects" className="btn btn-primary">{t.hero.viewWork}</a>
-            <a href="/resume.pdf" target="_blank" className={`btn ${styles.btnOutline}`}>{t.hero.downloadResume}</a>
-          </div>
+        <div className={styles.focus}>
+          {t.hero.focus.map(item => <span key={item}>{item}</span>)}
         </div>
       </div>
-
-      <div className={styles.glowElement}></div>
     </section>
   );
 }

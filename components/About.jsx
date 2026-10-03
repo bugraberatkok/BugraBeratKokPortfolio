@@ -7,7 +7,7 @@ export default function About() {
   
   return (
     <section id="about" className={styles.aboutSection}>
-      <div className={`container ${styles.aboutContainer}`}>
+      <div className="container">
         <h2 className="section-title">{t.about.title}</h2>
 
         <div className={styles.content}>
@@ -17,7 +17,7 @@ export default function About() {
             <p className={styles.paragraph}>{t.about.p3}</p>
           </div>
 
-          <div className={styles.skillsWrapper}>
+          <div>
             <h3 className={styles.skillsTitle}>{t.about.skillsTitle}</h3>
             {t.about.skillGroups.map((group) => (
               <div key={group.title} className={styles.skillGroup}>

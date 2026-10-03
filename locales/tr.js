@@ -4,7 +4,10 @@ export const tr = {
     "projects": "Projeler",
     "experience": "Deneyim",
     "contact": "İletişim",
-    "education": "Eğitim"
+    "education": "Eğitim",
+    "label": "Ana gezinme",
+    "menu": "Menü",
+    "close": "Kapat"
   },
   "hero": {
     "greeting": "Merhaba, ben",
@@ -13,7 +16,14 @@ export const tr = {
     "tagline": "Yazılım mimarisi, bakım kolaylığı ve test odaklı full-stack uygulamalar, backend servisleri ve yapay zekâ entegre sistemler geliştiriyorum.",
     "viewWork": "Projelerimi Gör",
     "downloadResume": "Özgeçmişimi İndir",
-    "photoAlt": "Buğra Berat Kök"
+    "photoAlt": "Buğra Berat Kök",
+    "currentRole": "Yazılım Geliştirici Stajyeri",
+    "focus": [
+      "Full-stack geliştirme",
+      "Backend geliştirme",
+      "Yazılım mimarisi",
+      "AI entegre sistemler"
+    ]
   },
   "about": {
     "title": "Hakkımda",
@@ -87,7 +97,7 @@ export const tr = {
     "title": "Öne Çıkan Projeler",
     "items": [
       {
-        "title": "Smart Chores Tracker — Yazılım Mühendisliği Bitirme Projesi",
+        "title": "Smart Chores Tracker",
         "description": "Ev işlerini ve oyunlaştırmayı birleştiren full-stack uygulama. Özellik odaklı modüler monolit mimari, JWT kimlik doğrulama, OWNER/ADMIN/MEMBER yetkilendirmesi, PostgreSQL migration’ları ve GitHub Actions, Railway, Vercel ile CI/dağıtım.",
         "tags": [
           "Java 21",
@@ -98,7 +108,7 @@ export const tr = {
           "GitHub Actions"
         ],
         "github": "https://github.com/bugraberatkok/SmartChoresTracker",
-        "icon": "system"
+        "category": "Yazılım Mühendisliği Bitirme Projesi"
       },
       {
         "title": "Şifa — AI Sağlık Asistanı",
@@ -112,7 +122,7 @@ export const tr = {
           "JavaScript"
         ],
         "github": "https://github.com/bugraberatkok/ailways-saglik-asistani",
-        "icon": "health"
+        "category": "Ailways · Ajan sistemleri"
       },
       {
         "title": "WordPress Multisite Yönetim Platformu",
@@ -124,7 +134,7 @@ export const tr = {
           "MCP"
         ],
         "github": "https://github.com/bugraberatkok/demo-wordpress-multisite",
-        "icon": "system"
+        "category": "Ailways · Web altyapısı"
       },
       {
         "title": "Football Analyzer AI",
@@ -137,7 +147,7 @@ export const tr = {
           "RapidAPI"
         ],
         "github": "https://github.com/bugraberatkok/football-analyzer-ai",
-        "icon": "system"
+        "category": "API entegrasyonu ve tasarım kalıpları"
       },
       {
         "title": "Focus — Özel C++ Oyun Motoru",
@@ -149,7 +159,7 @@ export const tr = {
           "OOP"
         ],
         "github": "https://github.com/bugraberatkok/Focus-GameEngine-and-Two-Playable-Games",
-        "icon": "game"
+        "category": "Oyun motoru mimarisi"
       },
       {
         "title": "FitTrack — Fitness ve Beslenme Paneli",
@@ -162,9 +172,19 @@ export const tr = {
           "H2"
         ],
         "github": "https://github.com/bugraberatkok/fitness-web-app",
-        "icon": "health"
+        "category": "Full-stack uygulama"
       }
-    ]
+    ],
+    "intro": "Tasarladığım, geliştirdiğim ve test ettiğim sistemlerden bir seçki.",
+    "viewSource": "Repoyu incele",
+    "architectureTitle": "Smart Chores Tracker mimarisi",
+    "interfaceLabel": "Arayüz",
+    "apiLabel": "API ve erişim",
+    "dataLabel": "Veri katmanı",
+    "households": "Evler",
+    "chores": "Görevler",
+    "rewards": "Ödüller",
+    "deploymentLabel": "Dağıtım"
   },
   "experience": {
     "title": "Profesyonel Deneyim",
@@ -247,16 +267,18 @@ export const tr = {
         "date": "2026",
         "file": "/certificates/databases.pdf"
       }
-    ]
+    ],
+    "current": "Güncel görev"
   },
   "contact": {
-    "title": "İletişime Geç",
+    "title": "Birlikte iyi sistemler geliştirelim.",
     "description": "Full-stack, backend ve yazılım mühendisliği alanlarında, AI entegre sistemler dahil yeni fırsatlara açığım. Bana e-posta veya LinkedIn üzerinden ulaşabilirsiniz.",
     "name": "İsim",
     "email": "E-posta",
     "message": "Mesaj",
     "send": "Mesaj Gönder",
-    "footer": "Next.js ile oluşturulmuştur."
+    "footer": "Next.js ile oluşturulmuştur.",
+    "emailAction": "E-posta gönder"
   },
   "education": {
     "title": "Eğitim ve Diller",

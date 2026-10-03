@@ -4,7 +4,10 @@ export const en = {
     "projects": "Projects",
     "experience": "Experience",
     "contact": "Contact",
-    "education": "Education"
+    "education": "Education",
+    "label": "Main navigation",
+    "menu": "Menu",
+    "close": "Close"
   },
   "hero": {
     "greeting": "Hi, I am",
@@ -13,7 +16,14 @@ export const en = {
     "tagline": "I build full-stack applications, backend services, and AI-integrated systems with a focus on software architecture, maintainability, and testing.",
     "viewWork": "View My Work",
     "downloadResume": "Download Resume",
-    "photoAlt": "Buğra Berat Kök"
+    "photoAlt": "Buğra Berat Kök",
+    "currentRole": "Software Developer Intern",
+    "focus": [
+      "Full-stack development",
+      "Backend engineering",
+      "Software architecture",
+      "AI-integrated systems"
+    ]
   },
   "about": {
     "title": "About Me",
@@ -87,7 +97,7 @@ export const en = {
     "title": "Featured Projects",
     "items": [
       {
-        "title": "Smart Chores Tracker — Software Engineering Capstone",
+        "title": "Smart Chores Tracker",
         "description": "Full-stack household chore management and gamification. A feature-oriented modular monolith with JWT authentication, OWNER/ADMIN/MEMBER authorization, PostgreSQL migrations, and CI/deployment through GitHub Actions, Railway, and Vercel.",
         "tags": [
           "Java 21",
@@ -98,7 +108,7 @@ export const en = {
           "GitHub Actions"
         ],
         "github": "https://github.com/bugraberatkok/SmartChoresTracker",
-        "icon": "system"
+        "category": "Software Engineering Capstone"
       },
       {
         "title": "Şifa — AI Health Assistant",
@@ -112,7 +122,7 @@ export const en = {
           "JavaScript"
         ],
         "github": "https://github.com/bugraberatkok/ailways-saglik-asistani",
-        "icon": "health"
+        "category": "Ailways · Agent systems"
       },
       {
         "title": "WordPress Multisite Management Platform",
@@ -124,7 +134,7 @@ export const en = {
           "MCP"
         ],
         "github": "https://github.com/bugraberatkok/demo-wordpress-multisite",
-        "icon": "system"
+        "category": "Ailways · Web infrastructure"
       },
       {
         "title": "Football Analyzer AI",
@@ -137,7 +147,7 @@ export const en = {
           "RapidAPI"
         ],
         "github": "https://github.com/bugraberatkok/football-analyzer-ai",
-        "icon": "system"
+        "category": "API integration & design patterns"
       },
       {
         "title": "Focus — Custom C++ Game Engine",
@@ -149,7 +159,7 @@ export const en = {
           "OOP"
         ],
         "github": "https://github.com/bugraberatkok/Focus-GameEngine-and-Two-Playable-Games",
-        "icon": "game"
+        "category": "Game engine architecture"
       },
       {
         "title": "FitTrack — Fitness & Nutrition Dashboard",
@@ -162,9 +172,19 @@ export const en = {
           "H2"
         ],
         "github": "https://github.com/bugraberatkok/fitness-web-app",
-        "icon": "health"
+        "category": "Full-stack application"
       }
-    ]
+    ],
+    "intro": "A selection of systems I’ve designed, built, and tested.",
+    "viewSource": "Explore repository",
+    "architectureTitle": "Inside Smart Chores Tracker",
+    "interfaceLabel": "Interface",
+    "apiLabel": "API & access",
+    "dataLabel": "Persistence",
+    "households": "Households",
+    "chores": "Chores",
+    "rewards": "Rewards",
+    "deploymentLabel": "Delivery"
   },
   "experience": {
     "title": "Professional Experience",
@@ -247,16 +267,18 @@ export const en = {
         "date": "2026",
         "file": "/certificates/databases.pdf"
       }
-    ]
+    ],
+    "current": "Current role"
   },
   "contact": {
-    "title": "Get In Touch",
+    "title": "Let’s build something well.",
     "description": "I’m open to full-stack, backend, and software engineering opportunities, including work on AI-integrated systems. Get in touch through email or LinkedIn.",
     "name": "Name",
     "email": "Email",
     "message": "Message",
     "send": "Send Message",
-    "footer": "Built with Next.js."
+    "footer": "Built with Next.js.",
+    "emailAction": "Send an email"
   },
   "education": {
     "title": "Education & Languages",

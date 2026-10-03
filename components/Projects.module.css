@@ -1,78 +1,172 @@
-.projectsSection {
-  background-color: var(--bg-color);
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
-  gap: 2rem;
-}
-
-.card {
-  padding: 2rem;
-  border-radius: 16px;
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  height: 100%;
-}
-
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-  border-color: var(--accent);
-}
-
-.cardHeader {
+.sectionHeader {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2rem;
+  align-items: baseline;
+  gap: 32px;
 }
-
-.folderIcon svg {
-  width: 40px;
-  height: 40px;
-  color: var(--accent);
-}
-
-.projectLinks {
-  display: flex;
-  gap: 1rem;
-}
-
-.projectLinks a {
+.sectionHeader > p {
   color: var(--text-muted);
+  max-width: 370px;
+  font-size: 0.95rem;
 }
-
-.projectLinks a:hover {
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 48px;
+}
+.featured {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 56px;
+  padding: 40px;
+  margin-bottom: 32px;
+  background: var(--surface);
+  border-top: 2px solid var(--accent);
+  border-radius: 0 0 4px 4px;
+}
+.card {
+  padding: 32px 0;
+  border-bottom: 1px solid var(--line);
+  min-width: 0;
+}
+.category {
+  color: var(--accent);
+  font-size: 0.85rem;
+  margin-bottom: 16px;
+}
+.projectTitle {
+  font-size: 1.7rem;
+  font-weight: 500;
+  letter-spacing: -0.035em;
+  line-height: 1.25;
+  margin-bottom: 20px;
+}
+.featured .projectTitle {
+  font-size: 2.5rem;
+}
+.projectTitle a {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.projectTitle a:hover, .repoLink:hover {
   color: var(--accent);
 }
-
-.projectLinks svg {
-  width: 22px;
-  height: 22px;
-}
-
-.projectTitle {
-  font-size: 1.4rem;
-  margin-bottom: 1rem;
-  color: var(--text-color);
-}
-
 .projectDescription {
   color: var(--text-muted);
-  font-size: 1rem;
-  flex-grow: 1;
-  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  max-width: 65ch;
 }
-
 .projectTechList {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.8rem;
+  gap: 8px 16px;
   list-style: none;
-  font-family: var(--font-mono);
   font-size: 0.8rem;
+  color: var(--text-color);
+  margin-top: 22px;
+}
+.projectTechList li {
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 4px;
+}
+.repoLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  margin-top: 18px;
+  font-size: 0.85rem;
+}
+.architecture {
+  border-left: 1px solid var(--line);
+  padding-left: 40px;
+}
+.architecture figcaption {
+  font-size: 0.85rem;
   color: var(--text-muted);
+  margin-bottom: 20px;
+}
+.node {
+  padding: 13px 18px;
+  border: 1px solid #4b5e78;
+  border-radius: 3px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  font-size: 0.85rem;
+}
+.node span {
+  color: var(--text-muted);
+}
+.node strong {
+  font-weight: 500;
+}
+.connector {
+  text-align: center;
+  color: var(--accent);
+  line-height: 1.2;
+  padding: 6px 0;
+}
+.modules {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  color: var(--accent);
+  font-size: 0.75rem;
+  margin-top: 10px;
+}
+.architecture > p {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  margin-top: 20px;
+}
+@media (max-width: 900px) {
+  .featured {
+    gap: 32px;
+    padding: 28px;
+  }
+  .architecture {
+    padding-left: 24px;
+  }
+  .node {
+    flex-direction: column;
+    gap: 2px;
+  }
+}
+@media (max-width: 700px) {
+  .sectionHeader {
+    display: block;
+    margin-bottom: 28px;
+  }
+  .sectionHeader h2 {
+    margin-bottom: 16px;
+  }
+  .grid, .featured {
+    grid-template-columns: 1fr;
+  }
+  .featured {
+    padding: 24px;
+    gap: 32px;
+  }
+  .featured .projectTitle {
+    font-size: 2rem;
+  }
+  .architecture {
+    border-left: 0;
+    border-top: 1px solid var(--line);
+    padding: 24px 0 0;
+  }
+  .node {
+    flex-direction: row;
+  }
+  .grid {
+    gap: 0;
+  }
+}
+@media (max-width: 380px) {
+  .node {
+    flex-direction: column;
+  }
 }
