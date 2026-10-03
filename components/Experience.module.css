@@ -8,6 +8,11 @@
   gap: 4rem;
 }
 
+.half,
+.tabPanels {
+  min-width: 0;
+}
+
 /* Tabs Styling for Experience */
 .tabsContainer {
   display: flex;
@@ -19,7 +24,7 @@
   flex-direction: column;
   border-left: 2px solid var(--glass-border);
   position: relative;
-  width: 220px;
+  width: 120px;
   flex-shrink: 0;
 }
 
@@ -110,6 +115,11 @@
   padding: 1.5rem;
   cursor: pointer;
   user-select: none;
+  width: 100%;
+  background: transparent;
+  border: none;
+  text-align: left;
+  font-family: inherit;
 }
 
 .certTitle {

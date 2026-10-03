@@ -7,7 +7,7 @@ A modern, fast, and responsive personal portfolio website designed to showcase m
 ## 💻 Tech Stack
 
 - **Framework**: [Next.js](https://nextjs.org/) (App Router)
-- **Library**: [React](https://reactjs.org/)
+- **Library**: [React](https://react.dev/)
 - **Styling**: Vanilla CSS with CSS Modules
 - **Deployment**: Vercel
 
@@ -15,14 +15,17 @@ A modern, fast, and responsive personal portfolio website designed to showcase m
 
 - **Responsive Design:** Optimized for both desktop and mobile devices.
 - **Modern UI:** "Dark Mode" styling with glassmorphism components and glowing hover effects.
-- **Single Page Navigation:** Smooth scrolling to different sections (About, Projects, Experience, Contact).
-- **Interactive Project Cards:** Direct links to GitHub repositories for my featured work (including Game Engines, AI, and Full-Stack applications).
+- **Bilingual Content:** English and Turkish content in `locales/en.js` and `locales/tr.js`, with a saved language preference.
+- **Single Page Navigation:** Smooth scrolling to About, Projects, Experience, Education, and Contact.
+- **Interactive Project Cards:** Smart Chores Tracker, Şifa, WordPress Multisite, Football Analyzer AI, Focus, and FitTrack, with current full-stack and AI-integrated work first.
+- **Technical Focus:** Backend development, software architecture, AI agent systems, testing, and delivery; game development remains part of my engineering background.
+- **Education & Languages:** Software Engineering (expected January 2027), CEIT double major (completed June 2026), Erasmus, and language proficiency.
 - **Organized Experience & Certificates:** Built with tabs and accordions for a clean, accessible layout without excessive scrolling.
 
 
 ## 📬 Contact
 
-I am a fourth-year Software Engineering student open to internship, junior developer, and software testing opportunities. Feel free to reach out to me!
+I am a Software Engineering student and Ailways Software Developer Intern, focused on full-stack/backend development, software architecture, and AI-integrated systems.
 
 - **Email**: [kokbugraberat@gmail.com](mailto:kokbugraberat@gmail.com)
 - **LinkedIn**: [linkedin.com/in/bugraberatkok](https://www.linkedin.com/in/bugraberatkok/)

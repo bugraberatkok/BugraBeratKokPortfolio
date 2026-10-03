@@ -1,26 +1,51 @@
 "use client";
 
-import React, { createContext, useContext, useState, useEffect } from "react";
+import React, { createContext, useContext, useSyncExternalStore, useEffect } from "react";
 import { en } from "../locales/en";
 import { tr } from "../locales/tr";
 
 const LanguageContext = createContext();
 
-export const LanguageProvider = ({ children }) => {
-  const [language, setLanguage] = useState("en");
+let sessionLanguage = "en";
 
-  // On mount, check if there's a saved language in localStorage
+function getLanguage() {
+  try {
+    const saved = localStorage.getItem("portfolio_lang");
+    return saved === "en" || saved === "tr" ? saved : sessionLanguage;
+  } catch {
+    return sessionLanguage;
+  }
+}
+
+function subscribe(onChange) {
+  window.addEventListener("storage", onChange);
+  window.addEventListener("portfolio-language-change", onChange);
+  return () => {
+    window.removeEventListener("storage", onChange);
+    window.removeEventListener("portfolio-language-change", onChange);
+  };
+}
+
+function getServerLanguage() {
+  return "en";
+}
+
+export const LanguageProvider = ({ children }) => {
+  const language = useSyncExternalStore(subscribe, getLanguage, getServerLanguage);
+
   useEffect(() => {
-    const savedLang = localStorage.getItem("portfolio_lang");
-    if (savedLang && (savedLang === "en" || savedLang === "tr")) {
-      setLanguage(savedLang);
-    }
-  }, []);
+    document.documentElement.lang = language;
+  }, [language]);
 
   const toggleLanguage = () => {
     const newLang = language === "en" ? "tr" : "en";
-    setLanguage(newLang);
-    localStorage.setItem("portfolio_lang", newLang);
+    sessionLanguage = newLang;
+    try {
+      localStorage.setItem("portfolio_lang", newLang);
+    } catch {
+      // Keep the selected language for this session when storage is unavailable.
+    }
+    window.dispatchEvent(new Event("portfolio-language-change"));
   };
 
   const t = language === "en" ? en : tr;

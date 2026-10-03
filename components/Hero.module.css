@@ -3,7 +3,7 @@
   overflow: hidden;
   display: flex;
   align-items: center;
-  padding-top: 80px; /* offset for navbar */
+  padding-top: 130px; /* offset for responsive navbar */
 }
 
 .heroContent {

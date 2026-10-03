@@ -23,6 +23,7 @@ export default function Experience() {
                   key={index}
                   className={`${styles.tabButton} ${activeTab === index ? styles.activeTab : ''}`}
                   onClick={() => setActiveTab(index)}
+                  aria-pressed={activeTab === index}
                 >
                   {job.company}
                 </button>
@@ -61,18 +62,23 @@ export default function Experience() {
                 key={cert.id}
                 className={`${styles.accordionItem} glass`}
               >
-                <div
+                <button
+                  type="button"
                   className={styles.accordionHeader}
                   onClick={() => setActiveCert(activeCert === cert.id ? null : cert.id)}
+                  aria-expanded={activeCert === cert.id}
+                  aria-controls={`certificate-${cert.id}`}
                 >
                   <h4 className={styles.certTitle}>{cert.title}</h4>
                   <span className={styles.accordionIcon}>
                     {activeCert === cert.id ? '−' : '+'}
                   </span>
-                </div>
+                </button>
 
                 <div
                   className={styles.accordionContent}
+                  id={`certificate-${cert.id}`}
+                  inert={activeCert !== cert.id}
                   style={{
                     maxHeight: activeCert === cert.id ? '200px' : '0',
                     opacity: activeCert === cert.id ? 1 : 0

@@ -44,11 +44,47 @@
 }
 
 .contactBtn {
+  display: inline-block;
   background-color: var(--glass-bg);
   padding: 0.5rem 1rem;
   border-radius: 6px;
   border: 1px solid var(--glass-border);
   transition: all 0.3s ease;
+}
+
+.langToggle {
+  cursor: pointer;
+  font: inherit;
+  font-weight: bold;
+  color: var(--text-color);
+  background: transparent;
+  border: none;
+  border-left: 1px solid var(--glass-border);
+  padding-left: 1rem;
+}
+
+@media (max-width: 700px) {
+  .navContainer {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .navLinks {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem 0.75rem;
+    font-size: 0.8rem;
+  }
+
+  .contactBtn {
+    padding: 0.25rem 0.5rem;
+  }
+
+  .langToggle {
+    padding-left: 0.75rem;
+  }
 }
 
 .contactBtn:hover {

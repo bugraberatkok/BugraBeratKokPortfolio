@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Professional Portfolio",
-  description: "A showcase of my work and experience.",
+  title: "Buğra Berat Kök | Software Engineering & Full-Stack Development",
+  description: "Full-stack and backend development, software architecture, and AI-integrated systems. Explore Buğra Berat Kök’s projects, internships, education, and technical experience.",
 };
 
 export default function RootLayout({ children }) {

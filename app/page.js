@@ -3,6 +3,7 @@ import Hero from '../components/Hero';
 import About from '../components/About';
 import Projects from '../components/Projects';
 import Experience from '../components/Experience';
+import Education from '../components/Education';
 import Contact from '../components/Contact';
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
         <About />
         <Projects />
         <Experience />
+        <Education />
         <Contact />
       </main>
       <footer style={{ textAlign: 'center', padding: '2rem', color: 'var(--text-muted)', borderTop: '1px solid var(--glass-border)' }}>

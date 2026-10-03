@@ -1,4 +1,5 @@
 "use client";
+import Image from 'next/image';
 import styles from './Hero.module.css';
 import { useLanguage } from '../context/LanguageContext';
 
@@ -10,7 +11,7 @@ export default function Hero() {
       <div className={`container ${styles.heroContent}`}>
         <div className={styles.photoContainer}>
           <div className={styles.photoPlaceholder}>
-            <img src="/hero/profile.jpg" alt={t.hero.photoAlt} />
+            <Image src="/hero/profile.jpg" alt={t.hero.photoAlt} fill sizes="(max-width: 900px) 250px, 320px" preload />
           </div>
         </div>
 

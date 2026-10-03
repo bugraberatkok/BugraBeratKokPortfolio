@@ -1,0 +1,53 @@
+.educationSection {
+  min-height: auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  border-radius: 16px;
+  padding: 2rem;
+}
+
+.institution {
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+}
+
+.degree {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 0.75rem;
+}
+
+.date {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.description {
+  color: var(--text-muted);
+}
+
+.languages {
+  margin-top: 2.5rem;
+}
+
+.languageList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.languageList li {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+}

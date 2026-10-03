@@ -1,134 +1,290 @@
 export const tr = {
-  // Navbar
-  nav: {
-    about: "Hakkımda",
-    projects: "Projeler",
-    experience: "Deneyim",
-    contact: "İletişim"
+  "nav": {
+    "about": "Hakkımda",
+    "projects": "Projeler",
+    "experience": "Deneyim",
+    "contact": "İletişim",
+    "education": "Eğitim"
   },
-
-  // Hero
-  hero: {
-    greeting: "Merhaba, ben",
-    name: "Buğra Berat Kök",
-    title: "Yazılım Mühendisliği Öğrencisi & Geliştirici",
-    tagline: "Sistemler oluşturmaktan, problem çözmekten ve her yinelemede işleri geliştirmekten keyif alıyorum. Çalışmalarım (backend) geliştirme, yazılım testi, web uygulamaları ve oyun teknolojilerini kapsıyor.",
-    viewWork: "Projelerimi Gör",
-    downloadResume: "Özgeçmişimi İndir",
-    photoAlt: "Buğra Berat Kök"
+  "hero": {
+    "greeting": "Merhaba, ben",
+    "name": "Buğra Berat Kök",
+    "title": "Yazılım Mühendisliği Öğrencisi · Full-Stack Geliştirici",
+    "tagline": "Yazılım mimarisi, bakım kolaylığı ve test odaklı full-stack uygulamalar, backend servisleri ve yapay zekâ entegre sistemler geliştiriyorum.",
+    "viewWork": "Projelerimi Gör",
+    "downloadResume": "Özgeçmişimi İndir",
+    "photoAlt": "Buğra Berat Kök"
   },
-
-  // About
-  about: {
-    title: "Hakkımda",
-    p1: "Merhaba! Ben Buğra, sistemlerin nasıl çalıştığını anlamaktan, fikirleri işlevsel projelere dönüştürmekten ve teknik problemlere pratik çözümler bulmaktan keyif alan dördüncü sınıf bir Yazılım Mühendisliği öğrencisiyim.",
-    p2: "Deneyimlerim backend geliştirme, web uygulamaları, yazılım testi, veritabanları ve oyun teknolojilerini kapsıyor. Şu anda test otomasyonu, oyun geliştirme ve backend teknolojileri gibi alanları keşfederken, proje tabanlı eğitimlerle yeteneklerimi güçlendiriyorum.",
-    skillsTitle: "Profesyonel Yeteneklerim ve Deneyimlerim"
-  },
-
-  // Projects
-  projects: {
-    title: "Öne Çıkan Projeler",
-    items: [
+  "about": {
+    "title": "Hakkımda",
+    "p1": "Ben Buğra, Bahçeşehir Üniversitesi Yazılım Mühendisliği öğrencisiyim; beklenen mezuniyet tarihim Ocak 2027. Java/Spring Boot backend servislerini, React/TypeScript arayüzlerini ve veritabanı tasarımını net bileşen sorumlulukları ve kimlik doğrulama sınırlarıyla bir araya getiriyorum.",
+    "p2": "Ailways’te yapay zekâ ajanları, n8n iş akışları ve merkezi web altyapısı üzerine çalışıyorum. AI araçlarını mimari alternatifleri değerlendirme, planlama, geliştirme, hata ayıklama, kod inceleme, refactoring, test ve doğrulama için kullanırken mimarinin, kod kalitesinin ve sistem davranışının teknik sorumluluğunu üstleniyorum.",
+    "skillsTitle": "Teknolojiler ve Mühendislik Pratikleri",
+    "p3": "Temelim algoritmalar, OOP, tasarım kalıpları, hata ayıklama, veritabanları ve yazılım testine dayanıyor. Önceki C++/C# oyun geliştirme çalışmalarım, gerçek zamanlı sistemler ve yeniden kullanılabilir mimari konusundaki deneyimimi güçlendirdi.",
+    "skillGroups": [
       {
-        title: "Focus — Özel 2D Oyun Motoru",
-        description: "C++ ile sıfırdan oluşturulmuş modüler bir 2D oyun motoru. Yeniden kullanılabilir render, fizik, girdi ve sahne sistemleri aracılığıyla iki oynanabilir oyunu desteklemektedir.",
-        tags: ["C++", "SDL", "OpenGL", "OOP"],
-        github: "https://github.com/bugraberatkok/Focus-GameEngine-and-Two-Playable-Games"
+        "title": "Backend ve Veri",
+        "items": [
+          "Java",
+          "Spring Boot",
+          "Spring Security / JWT",
+          "Spring Data JPA",
+          "PostgreSQL",
+          "Flyway",
+          "REST API"
+        ]
       },
       {
-        title: "Doomsday — 3D Uzay Koşucusu",
-        description: "Özel geometri, dinamik zorluk, obje havuzlama (object pooling), çarpışma algılama ve akıcı sinematik kamera hareketi içeren 3 boyutlu bir uzay koşu ve nişancı oyunu.",
-        tags: ["Java", "Processing", "P3D", "OOP"],
-        github: "https://github.com/bugraberatkok/ProcessingGameProject"
+        "title": "Frontend",
+        "items": [
+          "React",
+          "TypeScript",
+          "JavaScript",
+          "Next.js",
+          "Vite",
+          "HTML / CSS"
+        ]
       },
       {
-        title: "Football Analyzer AI",
-        description: "Gerçek zamanlı futbol istatistiklerini toplayan ve yapılandırılmış taktiksel raporlar oluşturmak için Gemini yapay zekasını kullanan tam yığın (full-stack) maç öncesi analiz platformu.",
-        tags: ["Java", "Spring Boot", "React", "Gemini API", "RapidAPI"],
-        github: "https://github.com/bugraberatkok/football-analyzer-ai"
+        "title": "Mimari ve AI Sistemleri",
+        "items": [
+          "Modüler Monolit",
+          "API / Veritabanı Tasarımı",
+          "Tasarım Kalıpları",
+          "n8n",
+          "AI Ajanları / Alt Ajanlar",
+          "Gemini",
+          "Supabase",
+          "MCP",
+          "AI Destekli Geliştirme"
+        ]
       },
       {
-        title: "FitTrack — Fitness ve Beslenme Paneli",
-        description: "Günlük öğünleri, kalorileri, antrenmanları, egzersiz gelişimini ve haftalık antrenman tutarlılığını takip etmek için güvenli tam yığın kontrol paneli.",
-        tags: ["Java", "Spring Boot", "React", "H2"],
-        github: "https://github.com/bugraberatkok/fitness-web-app"
+        "title": "Test ve Dağıtım",
+        "items": [
+          "Selenium",
+          "JUnit / Mockito",
+          "Postman",
+          "JMeter",
+          "Git / GitHub Actions",
+          "Docker",
+          "Railway / Vercel"
+        ]
       },
       {
-        title: "The Lost & Found Pet System",
-        description: "Kalıcı yerel depolama özellikli grafik arayüzü aracılığıyla kayıp veya bulunan evcil hayvanları kaydetmek, yönetmek ve takip etmek için bir masaüstü uygulaması.",
-        tags: ["Python", "Tkinter", "SQLite", "Git"],
-        github: "https://github.com/bengisusagir/TheLostFoundPetSystem"
-      },
-      {
-        title: "Instrument Duel",
-        description: "Müzikal zamanlama, duyarlı girdiler, ses tabanlı mekanikler ve özel bir JavaScript oyun döngüsü etrafında inşa edilmiş tarayıcı tabanlı bir ritim ve tepki oyunu.",
-        tags: ["JavaScript", "HTML5", "CSS3", "MIDI"],
-        github: "https://github.com/bugraberatkok/Instrument-Duel"
+        "title": "Oyun Geliştirme Temeli",
+        "items": [
+          "C++",
+          "C#",
+          "SDL / OpenGL",
+          "Unity",
+          "Unreal Engine"
+        ]
       }
     ]
   },
-
-  // Experience
-  experience: {
-    title: "Deneyim & Eğitim",
-    certTitle: "Sertifikalar",
-    issuer: "Veren Kurum:",
-    date: "Veriliş Tarihi:",
-    viewCert: "Sertifikayı Görüntüle (PDF)",
-    jobs: [
+  "projects": {
+    "title": "Öne Çıkan Projeler",
+    "items": [
       {
-        company: "Ideasoft",
-        title: "Frontend Geliştirici Stajyeri",
-        date: "Mar 2025 – Ağu 2025",
-        description: [
-          "WordPress ve Elementor kullanarak duyarlı web sayfaları oluşturuldu ve özelleştirildi.",
-          "Yeniden kullanılabilir kullanıcı arayüzü bileşenleri, animasyonlu bölümler ve etkileşimli sayfa elemanları geliştirildi.",
-          "Sayfa içi SEO iyileştirmeleri uygulandı ve devam eden ön yüz geliştirme görevlerine destek verildi.",
-          "Günlük toplantılar, görev planlaması ve düzenli tasarım güncellemeleri yoluyla ekiple işbirliği yapıldı."
+        "title": "Smart Chores Tracker — Yazılım Mühendisliği Bitirme Projesi",
+        "description": "Ev işlerini ve oyunlaştırmayı birleştiren full-stack uygulama. Özellik odaklı modüler monolit mimari, JWT kimlik doğrulama, OWNER/ADMIN/MEMBER yetkilendirmesi, PostgreSQL migration’ları ve GitHub Actions, Railway, Vercel ile CI/dağıtım.",
+        "tags": [
+          "Java 21",
+          "Spring Boot",
+          "React 19",
+          "TypeScript",
+          "PostgreSQL",
+          "GitHub Actions"
+        ],
+        "github": "https://github.com/bugraberatkok/SmartChoresTracker",
+        "icon": "system"
+      },
+      {
+        "title": "Şifa — AI Sağlık Asistanı",
+        "description": "Ailways stajında geliştirilen demo: ana sohbet ajanı ile semptom, randevu ve denetçi alt ajanları. Veritabanına dayalı bağlam, araç orkestrasyonu, idempotency, çıktı doğrulama; birim, veritabanı ve uçtan uca testler.",
+        "tags": [
+          "n8n",
+          "AI Agents",
+          "Gemini",
+          "Supabase",
+          "PostgreSQL",
+          "JavaScript"
+        ],
+        "github": "https://github.com/bugraberatkok/ailways-saglik-asistani",
+        "icon": "health"
+      },
+      {
+        "title": "WordPress Multisite Yönetim Platformu",
+        "description": "Ailways’te geliştirilen, bağımsız tema ve içeriklere sahip siteleri merkezden yöneten platform. İçerik Stüdyosu, canlı tıklayarak düzenleme, ortak medya/ürün yönetimi, SEO ve yapılandırılmış veri; MCP ve AI destekli yönetim denemeleri.",
+        "tags": [
+          "WordPress Multisite",
+          "Content Management",
+          "SEO",
+          "MCP"
+        ],
+        "github": "https://github.com/bugraberatkok/demo-wordpress-multisite",
+        "icon": "system"
+      },
+      {
+        "title": "Football Analyzer AI",
+        "description": "Sofascore istatistiklerini Gemini maç analizi için birleştiren Spring Boot/React uygulaması. MVC, Facade, Strategy ve dependency injection ile API verisi toplama, işleme ve AI entegrasyonu ayrıştırılıyor.",
+        "tags": [
+          "Java",
+          "Spring Boot",
+          "React",
+          "Gemini API",
+          "RapidAPI"
+        ],
+        "github": "https://github.com/bugraberatkok/football-analyzer-ai",
+        "icon": "system"
+      },
+      {
+        "title": "Focus — Özel C++ Oyun Motoru",
+        "description": "İki oynanabilir oyunu destekleyen yeniden kullanılabilir 2D motor: render, oyun döngüsü, girdi, çarpışma ve sahne yönetimi. Düşük seviyeli programlama, OOP ve motor sistemleri ile oyun mantığının ayrılması üzerine çalışma.",
+        "tags": [
+          "C++",
+          "SDL",
+          "OpenGL",
+          "OOP"
+        ],
+        "github": "https://github.com/bugraberatkok/Focus-GameEngine-and-Two-Playable-Games",
+        "icon": "game"
+      },
+      {
+        "title": "FitTrack — Fitness ve Beslenme Paneli",
+        "description": "JWT kimlik doğrulama, öğün ve antrenman takibi, kalori özetleri, kontrol paneli ve aktivite geçmişi sunan full-stack fitness ve beslenme uygulaması.",
+        "tags": [
+          "Spring Boot",
+          "Spring Security",
+          "JWT",
+          "React",
+          "H2"
+        ],
+        "github": "https://github.com/bugraberatkok/fitness-web-app",
+        "icon": "health"
+      }
+    ]
+  },
+  "experience": {
+    "title": "Profesyonel Deneyim",
+    "certTitle": "Sertifikalar",
+    "issuer": "Veren Kurum:",
+    "date": "Veriliş Tarihi:",
+    "viewCert": "Sertifikayı Görüntüle (PDF)",
+    "jobs": [
+      {
+        "company": "Ailways",
+        "title": "Yazılım Geliştirici Stajyeri",
+        "date": "14 Eylül 2026 – Devam ediyor",
+        "description": [
+          "n8n, Gemini, araç kullanan ajanlar ve uzman alt ajanlarla AI entegre sistemler geliştiriyorum.",
+          "Şifa’da Supabase/PostgreSQL bağlamı, çıktı doğrulama, idempotency ve otomatik testler üzerine çalışıyorum.",
+          "Canlı önizleme, içerik/ürün yönetimi ve SEO altyapısı içeren merkezi WordPress Multisite platformu tasarlıyorum.",
+          "Mimari değerlendirme, geliştirme, hata ayıklama, inceleme ve doğrulamada AI araçlarını teknik sahipliği koruyarak kullanıyorum."
         ]
       },
       {
-        company: "Egemsoft",
-        title: "Test Mühendisliği Staj Programı",
-        date: "Tem 2026 – Ağu 2026 | Devam Ediyor",
-        description: [
-          "Yazılım testi temelleri, SDLC, Çevik (Agile) ve Şelale (Waterfall) test süreçleri üzerine yoğun eğitim alınıyor.",
-          "İşlevsel, entegrasyon, UAT, regresyon, pozitif ve negatif test senaryoları tasarlanıyor.",
-          "Hata (defect) yaşam döngüsü yönetimi, test planlaması, Jira iş akışları, Postman ile API testi ve SQL sorguları uygulanıyor.",
-          "Mobil test, Java ile Selenium, test otomasyonu ve performans testi modüllerine doğru ilerleniyor."
+        "company": "Egemsoft",
+        "title": "Yazılım Testi / Test Otomasyonu Stajı",
+        "date": "2026 Yazı",
+        "description": [
+          "Java, Selenium, JUnit ve Maven ile arayüz otomasyonu, fonksiyonel test ve regresyon testi çalışmaları yaptım.",
+          "Postman ile REST API testi ve SQL ile doğrulama üzerine çalıştım.",
+          "JMeter ile performans, yük ve stres testleri; Jira, Jenkins ve Artifactory iş akışları hakkında deneyim kazandım."
         ]
       },
       {
-        company: "TNC Group",
-        title: "Proje Tabanlı Yazılım Mühendisliği Eğitimi",
-        date: "Tem 2026 – Ağu 2026 | Devam Ediyor",
-        description: [
-          "Web, mobil, veritabanı ve backend geliştirmeyi kapsayan proje tabanlı bir yazılım mühendisliği programına katılım sağlanıyor.",
-          "Her modül için pratik ödevler ve teknik projeler tamamlanıyor.",
-          "JavaScript web geliştirme, Android ve iOS uygulama geliştirme, SQL ve backend teknolojileri üzerinde çalışılıyor.",
-          "Uygulamalı çalışmalarla problem çözme, yazılım tasarımı ve uçtan uca geliştirme becerileri güçlendiriliyor."
+        "company": "IdeaSoft",
+        "title": "Frontend Geliştirici Stajyeri",
+        "date": "Altı aylık staj",
+        "description": [
+          "WordPress, Elementor, HTML, CSS ve JavaScript ile responsive siteler geliştirdim ve bakımını yaptım.",
+          "Arayüz iyileştirmeleri ve temel sayfa içi SEO çalışmaları yaptım."
         ]
       }
     ],
-    certificates: [
-      { id: 1, title: "Frontend Okulu", issuer: "Coderspace", date: "2024", file: "/certificates/frontend-school.pdf" },
-      { id: 2, title: "Yazılım Testine Giriş", issuer: "BTK Akademi", date: "2026", file: "/certificates/software-testing.pdf" },
-      { id: 3, title: "API ve API Testi", issuer: "BTK Akademi", date: "2026", file: "/certificates/api-testing.pdf" },
-      { id: 4, title: "Web Servislerine Giriş", issuer: "BTK Akademi", date: "2026", file: "/certificates/web-services.pdf" },
-      { id: 5, title: "Jenkins ile DevOps Çözümleri", issuer: "BTK Akademi", date: "2026", file: "/certificates/jenkins.pdf" },
-      { id: 6, title: "Veritabanlarına Giriş", issuer: "BTK Akademi", date: "2026", file: "/certificates/databases.pdf" }
+    "certificates": [
+      {
+        "id": 1,
+        "title": "Frontend Okulu",
+        "issuer": "Coderspace",
+        "date": "2024",
+        "file": "/certificates/frontend-school.pdf"
+      },
+      {
+        "id": 2,
+        "title": "Yazılım Testine Giriş",
+        "issuer": "BTK Akademi",
+        "date": "2026",
+        "file": "/certificates/software-testing.pdf"
+      },
+      {
+        "id": 3,
+        "title": "API ve API Testi",
+        "issuer": "BTK Akademi",
+        "date": "2026",
+        "file": "/certificates/api-testing.pdf"
+      },
+      {
+        "id": 4,
+        "title": "Web Servislerine Giriş",
+        "issuer": "BTK Akademi",
+        "date": "2026",
+        "file": "/certificates/web-services.pdf"
+      },
+      {
+        "id": 5,
+        "title": "Jenkins ile DevOps Çözümleri",
+        "issuer": "BTK Akademi",
+        "date": "2026",
+        "file": "/certificates/jenkins.pdf"
+      },
+      {
+        "id": 6,
+        "title": "Veritabanlarına Giriş",
+        "issuer": "BTK Akademi",
+        "date": "2026",
+        "file": "/certificates/databases.pdf"
+      }
     ]
   },
-
-  // Contact
-  contact: {
-    title: "İletişime Geç",
-    description: "Staj, junior geliştirici ve yazılım testi fırsatlarına açığım. Bana e-posta veya LinkedIn üzerinden ulaşmaktan çekinmeyin.",
-    name: "İsim",
-    email: "E-posta",
-    message: "Mesaj",
-    send: "Mesaj Gönder",
-    footer: "Next.js ile oluşturulmuştur."
+  "contact": {
+    "title": "İletişime Geç",
+    "description": "Full-stack, backend ve yazılım mühendisliği alanlarında, AI entegre sistemler dahil yeni fırsatlara açığım. Bana e-posta veya LinkedIn üzerinden ulaşabilirsiniz.",
+    "name": "İsim",
+    "email": "E-posta",
+    "message": "Mesaj",
+    "send": "Mesaj Gönder",
+    "footer": "Next.js ile oluşturulmuştur."
+  },
+  "education": {
+    "title": "Eğitim ve Diller",
+    "items": [
+      {
+        "institution": "Bahçeşehir Üniversitesi",
+        "degree": "Yazılım Mühendisliği Lisans",
+        "date": "Beklenen mezuniyet: Ocak 2027",
+        "description": "Algoritmalar, OOP, yazılım mimarisi, tasarım kalıpları, veritabanları ve test."
+      },
+      {
+        "institution": "Bahçeşehir Üniversitesi",
+        "degree": "Bilgisayar ve Öğretim Teknolojileri Eğitimi (CEIT) — Çift Anadal",
+        "date": "Tamamlandı: Haziran 2026",
+        "description": "Yazılım Mühendisliği ile birlikte tamamlandı."
+      },
+      {
+        "institution": "Universidad San Jorge",
+        "degree": "Erasmus Değişim Programı · Zaragoza, İspanya",
+        "date": "2025/2026",
+        "description": "Kriptografi ve bilgisayar grafikleri dersleri; uluslararası, İngilizce eğitim ortamında deneyim."
+      }
+    ],
+    "languagesTitle": "Diller",
+    "languages": [
+      "Türkçe — Ana dil",
+      "İngilizce — İleri seviye",
+      "İspanyolca — A1 Sertifikası"
+    ]
   }
 };

@@ -47,6 +47,22 @@
   list-style: none;
 }
 
+.skillGroup + .skillGroup {
+  margin-top: 1.5rem;
+}
+
+.groupTitle {
+  color: var(--accent);
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+}
+
+@media (max-width: 480px) {
+  .skillsWrapper {
+    padding: 1.5rem;
+  }
+}
+
 .skillItem {
   background: rgba(255, 255, 255, 0.05);
   color: var(--text-color);
