@@ -1,54 +1,5 @@
-.aboutSection {
-  background: #141a24;
-}
-.content {
-  display: grid;
-  grid-template-columns: 1fr 1.1fr;
-  gap: 80px;
-  align-items: start;
-}
-.textContent {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-.paragraph {
-  color: var(--text-muted);
-  font-size: 1rem;
-  max-width: 65ch;
-}
-.skillsTitle {
-  font-size: 1rem;
-  font-weight: 500;
-  margin-bottom: 24px;
-}
-.skillGroup {
-  border-top: 1px solid var(--line);
-  padding: 18px 0;
-}
-.groupTitle {
-  color: var(--accent);
-  font-size: 0.85rem;
-  font-weight: 500;
-  margin-bottom: 10px;
-}
-.skillsList {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  gap: 8px 16px;
-}
-.skillItem {
-  color: var(--text-muted);
-  font-size: 0.85rem;
-}
-@media (max-width: 900px) {
-  .content {
-    gap: 40px;
-  }
-}
-@media (max-width: 700px) {
-  .content {
-    grid-template-columns: 1fr;
-  }
-}
+.content { display: block; }
+.text { font-size: 15px; color: var(--text-muted); max-width: 680px; }.text p + p { margin-top: 12px; }
+.toolkit { margin-top: 26px; padding: 22px; border: 1px solid var(--line); border-radius: 12px; display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 18px; }
+.toolkit h3 { grid-column: 1/-1; font-size: 14px; font-weight: 500; }.group h4 { font-size: 13px; font-weight: 500; margin-bottom: 6px; }.group p { font-size: 13px; color: var(--text-muted); line-height: 1.8; }
+@media(max-width: 550px) { .toolkit { grid-template-columns: 1fr; gap: 16px; }.group { display: grid; grid-template-columns: 76px 1fr; gap: 10px; } }

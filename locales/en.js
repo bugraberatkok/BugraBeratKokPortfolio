@@ -13,8 +13,8 @@ export const en = {
     "greeting": "Hi, I am",
     "name": "Buğra Berat Kök",
     "title": "Software Engineering Student · Full-Stack Developer",
-    "tagline": "I build full-stack applications, backend services, and AI-integrated systems with a focus on software architecture, maintainability, and testing.",
-    "viewWork": "View My Work",
+    "tagline": "I build full-stack applications, backend systems, and AI integrations with a focus on software architecture.",
+    "viewWork": "Explore projects",
     "downloadResume": "Download Resume",
     "photoAlt": "Buğra Berat Kök",
     "currentRole": "Software Developer Intern",
@@ -27,156 +27,142 @@ export const en = {
   },
   "about": {
     "title": "About Me",
-    "p1": "I’m Buğra, a Software Engineering student at Bahçeşehir University, with expected graduation in January 2027. My work connects Java/Spring Boot backends, React/TypeScript interfaces, and database design with clear component responsibilities and authentication boundaries.",
-    "p2": "At Ailways, I work on AI agents, n8n workflows, and centralized web infrastructure. I use AI tools for architecture exploration, planning, implementation, debugging, review, refactoring, testing, and validation, while retaining responsibility for the architecture, code quality, and system behavior.",
-    "skillsTitle": "Technical Stack & Engineering Practices",
-    "p3": "My foundation includes algorithms, OOP, design patterns, debugging, databases, and software testing. Earlier C++/C# game development work strengthened my understanding of real-time systems and reusable architecture.",
+    "p1": "I’m a Software Engineering student at Bahçeşehir University. My work combines backend development, full-stack architecture, and AI-integrated systems.",
+    "p2": "I use AI to accelerate development while retaining responsibility for the architecture, code, and validation. My earlier game development work shaped my programming and system design foundations.",
+    "skillsTitle": "My toolkit",
+    "p3": "",
     "skillGroups": [
       {
-        "title": "Backend & Data",
+        "title": "Build",
         "items": [
           "Java",
           "Spring Boot",
-          "Spring Security / JWT",
-          "Spring Data JPA",
-          "PostgreSQL",
-          "Flyway",
-          "REST APIs"
-        ]
-      },
-      {
-        "title": "Frontend",
-        "items": [
           "React",
           "TypeScript",
-          "JavaScript",
-          "Next.js",
-          "Vite",
-          "HTML / CSS"
+          "PostgreSQL"
         ]
       },
       {
-        "title": "Architecture & AI Systems",
+        "title": "Integrate",
         "items": [
-          "Modular Monoliths",
-          "API / Database Design",
-          "Design Patterns",
           "n8n",
-          "AI Agents / Sub-agents",
-          "Gemini",
-          "Supabase",
-          "MCP",
-          "AI-Assisted Development"
+          "AI agents",
+          "API integration"
         ]
       },
       {
-        "title": "Testing & Delivery",
+        "title": "Validate",
         "items": [
           "Selenium",
-          "JUnit / Mockito",
+          "JUnit",
           "Postman",
-          "JMeter",
-          "Git / GitHub Actions",
-          "Docker",
-          "Railway / Vercel"
-        ]
-      },
-      {
-        "title": "Game Development Foundations",
-        "items": [
-          "C++",
-          "C#",
-          "SDL / OpenGL",
-          "Unity",
-          "Unreal Engine"
+          "JMeter"
         ]
       }
     ]
   },
   "projects": {
-    "title": "Featured Projects",
+    "title": "Selected Projects",
     "items": [
       {
         "title": "Smart Chores Tracker",
-        "description": "Full-stack household chore management and gamification. A feature-oriented modular monolith with JWT authentication, OWNER/ADMIN/MEMBER authorization, PostgreSQL migrations, and CI/deployment through GitHub Actions, Railway, and Vercel.",
+        "description": "A full-stack household chore platform with assignments, progress tracking, and rewards.",
         "tags": [
-          "Java 21",
           "Spring Boot",
-          "React 19",
-          "TypeScript",
-          "PostgreSQL",
-          "GitHub Actions"
+          "React / TypeScript",
+          "PostgreSQL"
         ],
         "github": "https://github.com/bugraberatkok/SmartChoresTracker",
-        "category": "Software Engineering Capstone"
+        "category": "Capstone",
+        "shortTitle": "Smart Chores Tracker",
+        "highlights": [
+          "Modular architecture and authentication / authorization.",
+          "CI and deployment."
+        ]
       },
       {
         "title": "Şifa — AI Health Assistant",
-        "description": "An Ailways internship demo with a main conversational agent and symptom, appointment, and reviewer sub-agents. Combines database-backed context, tool orchestration, idempotency, output validation, and unit, database, and end-to-end testing.",
+        "description": "A conversational health assistant with a main agent and specialized sub-agents.",
         "tags": [
           "n8n",
-          "AI Agents",
           "Gemini",
-          "Supabase",
-          "PostgreSQL",
-          "JavaScript"
+          "Supabase / PostgreSQL"
         ],
         "github": "https://github.com/bugraberatkok/ailways-saglik-asistani",
-        "category": "Ailways · Agent systems"
+        "category": "Ailways · AI agents",
+        "shortTitle": "Şifa AI Assistant",
+        "highlights": [
+          "Agent orchestration and conversational context.",
+          "Validation and automated testing."
+        ]
       },
       {
         "title": "WordPress Multisite Management Platform",
-        "description": "Developed at Ailways to centrally manage websites with independent themes and content. Includes a Content Studio, live click-to-edit previews, shared media/product management, SEO and structured data, and MCP/AI-assisted management experiments.",
+        "description": "Centralized management for independent websites, with shared content tools and live editing.",
         "tags": [
           "WordPress Multisite",
-          "Content Management",
-          "SEO",
-          "MCP"
+          "Content Studio",
+          "MCP experimentation"
         ],
         "github": "https://github.com/bugraberatkok/demo-wordpress-multisite",
-        "category": "Ailways · Web infrastructure"
+        "category": "Ailways · Infrastructure",
+        "shortTitle": "WordPress Multisite",
+        "highlights": [
+          "Shared infrastructure with independent site designs.",
+          "Centralized editing and management."
+        ]
       },
       {
         "title": "Football Analyzer AI",
-        "description": "A Spring Boot/React application that aggregates Sofascore statistics for Gemini match analysis. MVC, Facade, Strategy, and dependency injection separate API aggregation, processing, and AI integration.",
+        "description": "Football statistics and AI-assisted match analysis through a structured backend.",
         "tags": [
-          "Java",
           "Spring Boot",
           "React",
-          "Gemini API",
-          "RapidAPI"
+          "Gemini"
         ],
         "github": "https://github.com/bugraberatkok/football-analyzer-ai",
-        "category": "API integration & design patterns"
+        "category": "Match analysis",
+        "shortTitle": "Football Analyzer AI",
+        "highlights": [
+          "API aggregation.",
+          "MVC, Facade, and Strategy patterns."
+        ]
       },
       {
         "title": "Focus — Custom C++ Game Engine",
-        "description": "A reusable 2D engine powering two playable games, with rendering, game loops, input, collisions, and scene management. Demonstrates low-level programming, OOP, and separation between engine systems and gameplay.",
+        "description": "A reusable 2D engine powering two playable games.",
         "tags": [
           "C++",
           "SDL",
-          "OpenGL",
-          "OOP"
+          "OpenGL"
         ],
         "github": "https://github.com/bugraberatkok/Focus-GameEngine-and-Two-Playable-Games",
-        "category": "Game engine architecture"
+        "category": "C++ · Game engine",
+        "shortTitle": "Focus Game Engine",
+        "highlights": [
+          "Rendering, input, and collision systems.",
+          "Reusable engine architecture."
+        ]
       },
       {
         "title": "FitTrack — Fitness & Nutrition Dashboard",
-        "description": "A full-stack fitness and nutrition application with JWT authentication, meal and workout tracking, calorie summaries, a dashboard, and activity history.",
+        "description": "A full-stack fitness and nutrition tracking application.",
         "tags": [
           "Spring Boot",
-          "Spring Security",
-          "JWT",
           "React",
           "H2"
         ],
         "github": "https://github.com/bugraberatkok/fitness-web-app",
-        "category": "Full-stack application"
+        "category": "Fitness & nutrition",
+        "shortTitle": "FitTrack",
+        "highlights": [
+          "Authentication and a tracking dashboard.",
+          "Nutrition, workouts, and activity history."
+        ]
       }
     ],
     "intro": "A selection of systems I’ve designed, built, and tested.",
-    "viewSource": "Explore repository",
+    "viewSource": "View repository",
     "architectureTitle": "Inside Smart Chores Tracker",
     "interfaceLabel": "Interface",
     "apiLabel": "API & access",
@@ -198,10 +184,7 @@ export const en = {
         "title": "Software Developer Intern",
         "date": "14 September 2026 – Present",
         "description": [
-          "Developing AI-integrated systems with n8n, Gemini, tool-using agents, and specialized sub-agents.",
-          "Building Şifa with Supabase/PostgreSQL context, output validation, idempotency, and automated testing.",
-          "Designing a centralized WordPress Multisite management platform with live previews, content/product management, and SEO infrastructure.",
-          "Using AI tools for architecture exploration, implementation, debugging, review, and validation while maintaining technical ownership."
+          "AI integrations, n8n agents, software architecture, Şifa, and WordPress Multisite."
         ]
       },
       {
@@ -209,9 +192,7 @@ export const en = {
         "title": "Software Testing / Test Automation Internship",
         "date": "Summer 2026",
         "description": [
-          "Worked with Java, Selenium, JUnit, and Maven for UI automation and functional/regression testing.",
-          "Practiced REST API testing with Postman and SQL-based validation.",
-          "Used JMeter for performance, load, and stress testing; gained exposure to Jira, Jenkins, and Artifactory."
+          "Java, Selenium, Postman, and JMeter for UI automation, API testing, and performance/load testing."
         ]
       },
       {
@@ -219,8 +200,7 @@ export const en = {
         "title": "Frontend Developer Intern",
         "date": "Six-month internship",
         "description": [
-          "Built and maintained responsive websites with WordPress, Elementor, HTML, CSS, and JavaScript.",
-          "Implemented interface improvements and basic on-page SEO."
+          "Responsive websites with WordPress, Elementor, HTML, CSS, and JavaScript."
         ]
       }
     ],
@@ -271,14 +251,14 @@ export const en = {
     "current": "Current role"
   },
   "contact": {
-    "title": "Let’s build something well.",
-    "description": "I’m open to full-stack, backend, and software engineering opportunities, including work on AI-integrated systems. Get in touch through email or LinkedIn.",
+    "title": "Let’s build something together.",
+    "description": "",
     "name": "Name",
     "email": "Email",
     "message": "Message",
     "send": "Send Message",
     "footer": "Built with Next.js.",
-    "emailAction": "Send an email"
+    "emailAction": "Email"
   },
   "education": {
     "title": "Education & Languages",
@@ -287,19 +267,19 @@ export const en = {
         "institution": "Bahçeşehir University",
         "degree": "B.Sc. Software Engineering",
         "date": "Expected graduation: January 2027",
-        "description": "Algorithms, OOP, software architecture, design patterns, databases, and testing."
+        "description": ""
       },
       {
         "institution": "Bahçeşehir University",
         "degree": "Computer Education and Instructional Technology (CEIT) — Double Major",
         "date": "Completed: June 2026",
-        "description": "Completed alongside Software Engineering."
+        "description": ""
       },
       {
         "institution": "Universidad San Jorge",
         "degree": "Erasmus Exchange · Zaragoza, Spain",
         "date": "2025/2026",
-        "description": "Cryptography and computer graphics coursework; experience studying in an international English-speaking environment."
+        "description": ""
       }
     ],
     "languagesTitle": "Languages",
@@ -308,5 +288,18 @@ export const en = {
       "English — Advanced",
       "Spanish — A1 Certificate"
     ]
+  },
+  "workbench": {
+    "choose": "Choose a cartridge",
+    "loaded": "Loaded",
+    "insert": "Insert",
+    "hint": "Pick a project. Let the machine do its thing.",
+    "companion": "Your project companion",
+    "online": "ONLINE",
+    "ready": "READY",
+    "standby": "Good ideas.\nBuilt into systems.",
+    "standbyHint": "Insert a project to explore.",
+    "eject": "Eject project",
+    "footer": "A little playfulness. A lot of engineering."
   }
 };

@@ -15,17 +15,6 @@ export default function Experience() {
             </article>
           ))}
         </div>
-        <div className={styles.certificates} id="certificates">
-          <h3>{t.experience.certTitle}</h3>
-          <div className={styles.certGrid}>
-            {t.experience.certificates.map(cert => (
-              <details key={cert.id} className={styles.certificate}>
-                <summary>{cert.title}<span aria-hidden="true">+</span></summary>
-                <div className={styles.certDetails}><p>{cert.issuer} · {cert.date}</p><a href={cert.file} target="_blank" rel="noreferrer">{t.experience.viewCert} ↗</a></div>
-              </details>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   );

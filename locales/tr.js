@@ -13,8 +13,8 @@ export const tr = {
     "greeting": "Merhaba, ben",
     "name": "Buğra Berat Kök",
     "title": "Yazılım Mühendisliği Öğrencisi · Full-Stack Geliştirici",
-    "tagline": "Yazılım mimarisi, bakım kolaylığı ve test odaklı full-stack uygulamalar, backend servisleri ve yapay zekâ entegre sistemler geliştiriyorum.",
-    "viewWork": "Projelerimi Gör",
+    "tagline": "Yazılım mimarisine odaklanarak full-stack uygulamalar, backend sistemleri ve AI entegrasyonları geliştiriyorum.",
+    "viewWork": "Projeleri keşfet",
     "downloadResume": "Özgeçmişimi İndir",
     "photoAlt": "Buğra Berat Kök",
     "currentRole": "Yazılım Geliştirici Stajyeri",
@@ -27,156 +27,142 @@ export const tr = {
   },
   "about": {
     "title": "Hakkımda",
-    "p1": "Ben Buğra, Bahçeşehir Üniversitesi Yazılım Mühendisliği öğrencisiyim; beklenen mezuniyet tarihim Ocak 2027. Java/Spring Boot backend servislerini, React/TypeScript arayüzlerini ve veritabanı tasarımını net bileşen sorumlulukları ve kimlik doğrulama sınırlarıyla bir araya getiriyorum.",
-    "p2": "Ailways’te yapay zekâ ajanları, n8n iş akışları ve merkezi web altyapısı üzerine çalışıyorum. AI araçlarını mimari alternatifleri değerlendirme, planlama, geliştirme, hata ayıklama, kod inceleme, refactoring, test ve doğrulama için kullanırken mimarinin, kod kalitesinin ve sistem davranışının teknik sorumluluğunu üstleniyorum.",
-    "skillsTitle": "Teknolojiler ve Mühendislik Pratikleri",
-    "p3": "Temelim algoritmalar, OOP, tasarım kalıpları, hata ayıklama, veritabanları ve yazılım testine dayanıyor. Önceki C++/C# oyun geliştirme çalışmalarım, gerçek zamanlı sistemler ve yeniden kullanılabilir mimari konusundaki deneyimimi güçlendirdi.",
+    "p1": "Bahçeşehir Üniversitesi’nde Yazılım Mühendisliği öğrencisiyim. Çalışmalarım backend geliştirme, full-stack mimari ve AI entegre sistemleri bir araya getiriyor.",
+    "p2": "AI araçlarını geliştirmeyi hızlandırmak için kullanırken mimari, kod ve doğrulama sorumluluğunu koruyorum. Oyun geliştirme geçmişim programlama ve sistem tasarımı temellerimi şekillendirdi.",
+    "skillsTitle": "Teknik araçlarım",
+    "p3": "",
     "skillGroups": [
       {
-        "title": "Backend ve Veri",
+        "title": "Geliştir",
         "items": [
           "Java",
           "Spring Boot",
-          "Spring Security / JWT",
-          "Spring Data JPA",
-          "PostgreSQL",
-          "Flyway",
-          "REST API"
-        ]
-      },
-      {
-        "title": "Frontend",
-        "items": [
           "React",
           "TypeScript",
-          "JavaScript",
-          "Next.js",
-          "Vite",
-          "HTML / CSS"
+          "PostgreSQL"
         ]
       },
       {
-        "title": "Mimari ve AI Sistemleri",
+        "title": "Entegre et",
         "items": [
-          "Modüler Monolit",
-          "API / Veritabanı Tasarımı",
-          "Tasarım Kalıpları",
           "n8n",
-          "AI Ajanları / Alt Ajanlar",
-          "Gemini",
-          "Supabase",
-          "MCP",
-          "AI Destekli Geliştirme"
+          "AI ajanları",
+          "API entegrasyonu"
         ]
       },
       {
-        "title": "Test ve Dağıtım",
+        "title": "Doğrula",
         "items": [
           "Selenium",
-          "JUnit / Mockito",
+          "JUnit",
           "Postman",
-          "JMeter",
-          "Git / GitHub Actions",
-          "Docker",
-          "Railway / Vercel"
-        ]
-      },
-      {
-        "title": "Oyun Geliştirme Temeli",
-        "items": [
-          "C++",
-          "C#",
-          "SDL / OpenGL",
-          "Unity",
-          "Unreal Engine"
+          "JMeter"
         ]
       }
     ]
   },
   "projects": {
-    "title": "Öne Çıkan Projeler",
+    "title": "Seçili Projeler",
     "items": [
       {
         "title": "Smart Chores Tracker",
-        "description": "Ev işlerini ve oyunlaştırmayı birleştiren full-stack uygulama. Özellik odaklı modüler monolit mimari, JWT kimlik doğrulama, OWNER/ADMIN/MEMBER yetkilendirmesi, PostgreSQL migration’ları ve GitHub Actions, Railway, Vercel ile CI/dağıtım.",
+        "description": "Görev atama, ilerleme takibi ve ödüller sunan full-stack ev işi yönetim platformu.",
         "tags": [
-          "Java 21",
           "Spring Boot",
-          "React 19",
-          "TypeScript",
-          "PostgreSQL",
-          "GitHub Actions"
+          "React / TypeScript",
+          "PostgreSQL"
         ],
         "github": "https://github.com/bugraberatkok/SmartChoresTracker",
-        "category": "Yazılım Mühendisliği Bitirme Projesi"
+        "category": "Bitirme projesi",
+        "shortTitle": "Smart Chores Tracker",
+        "highlights": [
+          "Modüler mimari, kimlik doğrulama ve yetkilendirme.",
+          "CI ve deployment."
+        ]
       },
       {
         "title": "Şifa — AI Sağlık Asistanı",
-        "description": "Ailways stajında geliştirilen demo: ana sohbet ajanı ile semptom, randevu ve denetçi alt ajanları. Veritabanına dayalı bağlam, araç orkestrasyonu, idempotency, çıktı doğrulama; birim, veritabanı ve uçtan uca testler.",
+        "description": "Ana ajan ve uzman alt ajanlarla çalışan sohbet tabanlı sağlık asistanı.",
         "tags": [
           "n8n",
-          "AI Agents",
           "Gemini",
-          "Supabase",
-          "PostgreSQL",
-          "JavaScript"
+          "Supabase / PostgreSQL"
         ],
         "github": "https://github.com/bugraberatkok/ailways-saglik-asistani",
-        "category": "Ailways · Ajan sistemleri"
+        "category": "Ailways · AI ajanları",
+        "shortTitle": "Şifa AI Asistanı",
+        "highlights": [
+          "Ajan orkestrasyonu ve sohbet bağlamı.",
+          "Doğrulama ve otomatik testler."
+        ]
       },
       {
         "title": "WordPress Multisite Yönetim Platformu",
-        "description": "Ailways’te geliştirilen, bağımsız tema ve içeriklere sahip siteleri merkezden yöneten platform. İçerik Stüdyosu, canlı tıklayarak düzenleme, ortak medya/ürün yönetimi, SEO ve yapılandırılmış veri; MCP ve AI destekli yönetim denemeleri.",
+        "description": "Ortak içerik araçları ve canlı düzenlemeyle bağımsız web sitelerini merkezi olarak yöneten platform.",
         "tags": [
           "WordPress Multisite",
-          "Content Management",
-          "SEO",
-          "MCP"
+          "Content Studio",
+          "MCP denemeleri"
         ],
         "github": "https://github.com/bugraberatkok/demo-wordpress-multisite",
-        "category": "Ailways · Web altyapısı"
+        "category": "Ailways · Altyapı",
+        "shortTitle": "WordPress Multisite",
+        "highlights": [
+          "Bağımsız site tasarımları için ortak altyapı.",
+          "Merkezi düzenleme ve yönetim."
+        ]
       },
       {
         "title": "Football Analyzer AI",
-        "description": "Sofascore istatistiklerini Gemini maç analizi için birleştiren Spring Boot/React uygulaması. MVC, Facade, Strategy ve dependency injection ile API verisi toplama, işleme ve AI entegrasyonu ayrıştırılıyor.",
+        "description": "Yapılandırılmış bir backend üzerinden futbol istatistikleri ve AI destekli maç analizi.",
         "tags": [
-          "Java",
           "Spring Boot",
           "React",
-          "Gemini API",
-          "RapidAPI"
+          "Gemini"
         ],
         "github": "https://github.com/bugraberatkok/football-analyzer-ai",
-        "category": "API entegrasyonu ve tasarım kalıpları"
+        "category": "Maç analizi",
+        "shortTitle": "Football Analyzer AI",
+        "highlights": [
+          "API verilerinin birleştirilmesi.",
+          "MVC, Facade ve Strategy desenleri."
+        ]
       },
       {
         "title": "Focus — Özel C++ Oyun Motoru",
-        "description": "İki oynanabilir oyunu destekleyen yeniden kullanılabilir 2D motor: render, oyun döngüsü, girdi, çarpışma ve sahne yönetimi. Düşük seviyeli programlama, OOP ve motor sistemleri ile oyun mantığının ayrılması üzerine çalışma.",
+        "description": "İki oynanabilir oyuna güç veren, yeniden kullanılabilir 2D oyun motoru.",
         "tags": [
           "C++",
           "SDL",
-          "OpenGL",
-          "OOP"
+          "OpenGL"
         ],
         "github": "https://github.com/bugraberatkok/Focus-GameEngine-and-Two-Playable-Games",
-        "category": "Oyun motoru mimarisi"
+        "category": "C++ · Oyun motoru",
+        "shortTitle": "Focus Oyun Motoru",
+        "highlights": [
+          "Rendering, girdi ve çarpışma sistemleri.",
+          "Yeniden kullanılabilir motor mimarisi."
+        ]
       },
       {
         "title": "FitTrack — Fitness ve Beslenme Paneli",
-        "description": "JWT kimlik doğrulama, öğün ve antrenman takibi, kalori özetleri, kontrol paneli ve aktivite geçmişi sunan full-stack fitness ve beslenme uygulaması.",
+        "description": "Full-stack fitness ve beslenme takip uygulaması.",
         "tags": [
           "Spring Boot",
-          "Spring Security",
-          "JWT",
           "React",
           "H2"
         ],
         "github": "https://github.com/bugraberatkok/fitness-web-app",
-        "category": "Full-stack uygulama"
+        "category": "Fitness ve beslenme",
+        "shortTitle": "FitTrack",
+        "highlights": [
+          "Kimlik doğrulama ve takip paneli.",
+          "Beslenme, antrenman ve aktivite geçmişi."
+        ]
       }
     ],
     "intro": "Tasarladığım, geliştirdiğim ve test ettiğim sistemlerden bir seçki.",
-    "viewSource": "Repoyu incele",
+    "viewSource": "Repoyu görüntüle",
     "architectureTitle": "Smart Chores Tracker mimarisi",
     "interfaceLabel": "Arayüz",
     "apiLabel": "API ve erişim",
@@ -198,10 +184,7 @@ export const tr = {
         "title": "Yazılım Geliştirici Stajyeri",
         "date": "14 Eylül 2026 – Devam ediyor",
         "description": [
-          "n8n, Gemini, araç kullanan ajanlar ve uzman alt ajanlarla AI entegre sistemler geliştiriyorum.",
-          "Şifa’da Supabase/PostgreSQL bağlamı, çıktı doğrulama, idempotency ve otomatik testler üzerine çalışıyorum.",
-          "Canlı önizleme, içerik/ürün yönetimi ve SEO altyapısı içeren merkezi WordPress Multisite platformu tasarlıyorum.",
-          "Mimari değerlendirme, geliştirme, hata ayıklama, inceleme ve doğrulamada AI araçlarını teknik sahipliği koruyarak kullanıyorum."
+          "AI entegrasyonları, n8n ajanları, yazılım mimarisi, Şifa ve WordPress Multisite."
         ]
       },
       {
@@ -209,9 +192,7 @@ export const tr = {
         "title": "Yazılım Testi / Test Otomasyonu Stajı",
         "date": "2026 Yazı",
         "description": [
-          "Java, Selenium, JUnit ve Maven ile arayüz otomasyonu, fonksiyonel test ve regresyon testi çalışmaları yaptım.",
-          "Postman ile REST API testi ve SQL ile doğrulama üzerine çalıştım.",
-          "JMeter ile performans, yük ve stres testleri; Jira, Jenkins ve Artifactory iş akışları hakkında deneyim kazandım."
+          "UI otomasyonu, API testleri ve performans/yük testleri için Java, Selenium, Postman ve JMeter."
         ]
       },
       {
@@ -219,8 +200,7 @@ export const tr = {
         "title": "Frontend Geliştirici Stajyeri",
         "date": "Altı aylık staj",
         "description": [
-          "WordPress, Elementor, HTML, CSS ve JavaScript ile responsive siteler geliştirdim ve bakımını yaptım.",
-          "Arayüz iyileştirmeleri ve temel sayfa içi SEO çalışmaları yaptım."
+          "WordPress, Elementor, HTML, CSS ve JavaScript ile responsive web siteleri."
         ]
       }
     ],
@@ -271,14 +251,14 @@ export const tr = {
     "current": "Güncel görev"
   },
   "contact": {
-    "title": "Birlikte iyi sistemler geliştirelim.",
-    "description": "Full-stack, backend ve yazılım mühendisliği alanlarında, AI entegre sistemler dahil yeni fırsatlara açığım. Bana e-posta veya LinkedIn üzerinden ulaşabilirsiniz.",
+    "title": "Birlikte bir şeyler geliştirelim.",
+    "description": "",
     "name": "İsim",
     "email": "E-posta",
     "message": "Mesaj",
     "send": "Mesaj Gönder",
     "footer": "Next.js ile oluşturulmuştur.",
-    "emailAction": "E-posta gönder"
+    "emailAction": "E-posta"
   },
   "education": {
     "title": "Eğitim ve Diller",
@@ -287,19 +267,19 @@ export const tr = {
         "institution": "Bahçeşehir Üniversitesi",
         "degree": "Yazılım Mühendisliği Lisans",
         "date": "Beklenen mezuniyet: Ocak 2027",
-        "description": "Algoritmalar, OOP, yazılım mimarisi, tasarım kalıpları, veritabanları ve test."
+        "description": ""
       },
       {
         "institution": "Bahçeşehir Üniversitesi",
         "degree": "Bilgisayar ve Öğretim Teknolojileri Eğitimi (CEIT) — Çift Anadal",
         "date": "Tamamlandı: Haziran 2026",
-        "description": "Yazılım Mühendisliği ile birlikte tamamlandı."
+        "description": ""
       },
       {
         "institution": "Universidad San Jorge",
         "degree": "Erasmus Değişim Programı · Zaragoza, İspanya",
         "date": "2025/2026",
-        "description": "Kriptografi ve bilgisayar grafikleri dersleri; uluslararası, İngilizce eğitim ortamında deneyim."
+        "description": ""
       }
     ],
     "languagesTitle": "Diller",
@@ -308,5 +288,18 @@ export const tr = {
       "İngilizce — İleri seviye",
       "İspanyolca — A1 Sertifikası"
     ]
+  },
+  "workbench": {
+    "choose": "Bir kartuş seç",
+    "loaded": "Yüklendi",
+    "insert": "Yerleştir",
+    "hint": "Bir proje seç. Gerisini makineye bırak.",
+    "companion": "Proje yol arkadaşın",
+    "online": "ÇEVRİMİÇİ",
+    "ready": "HAZIR",
+    "standby": "İyi fikirler.\nÇalışan sistemler.",
+    "standbyHint": "Keşfetmek için bir proje yerleştir.",
+    "eject": "Projeyi çıkar",
+    "footer": "Biraz eğlence. Bolca mühendislik."
   }
 };

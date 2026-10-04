@@ -15,7 +15,6 @@ export default function Education() {
               <p className={styles.institution}>{item.institution}</p>
               <h3 className={styles.degree}>{item.degree}</h3>
               <p className={styles.date}>{item.date}</p>
-              <p className={styles.description}>{item.description}</p>
             </article>
           ))}
         </div>

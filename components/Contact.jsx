@@ -6,7 +6,7 @@ export default function Contact() {
   return (
     <section id="contact">
       <div className={'container ' + styles.container}>
-        <div><h2 className={styles.title}>{t.contact.title}</h2><p className={styles.description}>{t.contact.description}</p></div>
+        <div><h2 className={styles.title}>{t.contact.title}</h2></div>
         <div className={styles.socials}>
           <a href="mailto:kokbugraberat@gmail.com">{t.contact.emailAction}<span aria-hidden="true">↗</span></a>
           <a href="https://www.linkedin.com/in/bugraberatkok/" target="_blank" rel="noreferrer">LinkedIn<span aria-hidden="true">↗</span></a>

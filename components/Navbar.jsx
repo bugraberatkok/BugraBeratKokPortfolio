@@ -14,7 +14,7 @@ export default function Navbar() {
           <button type="button" className={styles.menuToggle} aria-expanded={open} aria-controls="main-navigation" onClick={() => setOpen(!open)}>{open ? t.nav.close : t.nav.menu}</button>
         </div>
         <ul id="main-navigation" className={open ? styles.navOpen : styles.navLinks}>
-          {['projects', 'about', 'experience', 'education', 'contact'].map(id => (
+          {['about', 'experience', 'projects', 'education', 'contact'].map(id => (
             <li key={id}><a href={'#' + id} onClick={() => setOpen(false)}>{t.nav[id]}</a></li>
           ))}
         </ul>
