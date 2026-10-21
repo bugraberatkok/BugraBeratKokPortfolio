@@ -30,7 +30,7 @@ function getServerLanguage() {
   return "en";
 }
 
-export const LanguageProvider = ({ children }) => {
+export const LanguageProvider = ({ children, content = { en, tr } }) => {
   const language = useSyncExternalStore(subscribe, getLanguage, getServerLanguage);
 
   useEffect(() => {
@@ -48,7 +48,7 @@ export const LanguageProvider = ({ children }) => {
     window.dispatchEvent(new Event("portfolio-language-change"));
   };
 
-  const t = language === "en" ? en : tr;
+  const t = language === "en" ? content.en : content.tr;
 
   return (
     <LanguageContext.Provider value={{ language, toggleLanguage, t }}>

@@ -11,8 +11,8 @@ export default function About() {
           <div className={styles.text}><p>{t.about.p1}</p><p>{t.about.p2}</p></div>
           <div className={styles.toolkit}>
             <h3>{t.about.skillsTitle}</h3>
-            {t.about.skillGroups.map(group => (
-              <div className={styles.group} key={group.title}>
+            {t.about.skillGroups.map((group, index) => (
+              <div className={styles.group} key={index}>
                 <h4>{group.title}</h4>
                 <p>{group.items.join(' · ')}</p>
               </div>

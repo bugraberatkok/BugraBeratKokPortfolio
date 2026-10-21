@@ -1,0 +1,94 @@
+/* Shell */
+.shell { min-height: 100vh; }
+.header { position: sticky; top: 0; z-index: 10; background: rgba(13, 17, 23, .92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+.headerInner { max-width: 1180px; margin: 0 auto; padding: 14px 32px; display: flex; align-items: center; gap: 28px; }
+.brand { font-weight: 600; letter-spacing: -.02em; }.brand span { color: var(--yellow); }
+.nav { display: flex; gap: 6px; flex: 1; }
+.nav a { font-size: 14px; padding: 6px 12px; border-radius: 6px; color: var(--text-muted); }
+.nav a:hover { color: var(--text-color); }
+.nav .navActive { color: var(--text-color); background: var(--surface); }
+.headerActions { display: flex; align-items: center; gap: 18px; font-size: 13px; color: var(--text-muted); }
+.headerActions a:hover, .linkButton:hover { color: var(--yellow); }
+.linkButton { background: none; border: 0; color: inherit; cursor: pointer; font-size: 13px; }
+.main { max-width: 1180px; margin: 0 auto; padding: 36px 32px 80px; }
+
+/* Shared bits */
+.centered { min-height: 100vh; display: grid; place-items: center; padding: 24px; }
+.card { width: 100%; max-width: 420px; display: grid; gap: 16px; padding: 28px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
+.cardTitle { font-size: 20px; font-weight: 500; letter-spacing: -.02em; }
+.card code { font-family: var(--font-mono); font-size: 12px; color: var(--yellow); }
+.pageHead { display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; margin-bottom: 24px; }
+.pageTitle { font-size: 24px; font-weight: 500; letter-spacing: -.03em; }
+.muted { color: var(--text-muted); font-size: 14px; }
+.meta { color: var(--gold); font-size: 13px; }
+.error { color: #ff7b72; font-size: 14px; }
+.success { color: #7ee2a8; font-size: 14px; }
+.empty { padding: 32px; border: 1px dashed var(--line); border-radius: 12px; color: var(--text-muted); text-align: center; font-size: 14px; }
+
+/* Form controls */
+.field { display: grid; gap: 6px; font-size: 13px; color: var(--text-muted); }
+.input { width: 100%; padding: 9px 11px; background: #161b22; border: 1px solid var(--line); border-radius: 6px; color: var(--text-color); font: inherit; font-size: 14px; line-height: 1.5; }
+.input:focus { outline: none; border-color: var(--yellow); }
+textarea.input { resize: vertical; min-height: 64px; }
+input[type="file"].input { padding: 7px; font-size: 13px; color: var(--text-muted); }
+.checkbox { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-muted); }
+.checkbox a { color: var(--yellow); }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 18px; }
+.formActions { display: flex; gap: 10px; }
+.shell :global(.btn):disabled, .centered :global(.btn):disabled { opacity: .5; cursor: not-allowed; transform: none; }
+.smallButton, .iconButton, .addButton { background: transparent; border: 1px solid var(--line); border-radius: 6px; color: var(--text-color); font-size: 13px; cursor: pointer; }
+.smallButton { padding: 5px 11px; }
+.iconButton { width: 30px; height: 30px; display: inline-grid; place-items: center; }
+.smallButton:hover:not(:disabled), .iconButton:hover:not(:disabled), .addButton:hover { border-color: var(--yellow); color: var(--yellow); }
+.smallButton:disabled, .iconButton:disabled { opacity: .35; cursor: not-allowed; }
+.danger { border-color: #ff7b72; color: #ff7b72; }
+.addButton { justify-self: start; padding: 6px 12px; border-style: dashed; color: var(--text-muted); }
+
+/* Certificates */
+.panel { display: grid; gap: 18px; padding: 24px; margin-bottom: 24px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
+.panelTitle { font-size: 17px; font-weight: 500; }
+.certList { list-style: none; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+.certItem { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 18px 20px; }
+.certItem + .certItem { border-top: 1px solid var(--line); }
+.certInfo { display: grid; gap: 2px; min-width: 0; }
+.certInfo strong { font-weight: 500; }
+.certLinks { display: flex; gap: 16px; font-size: 13px; margin-top: 4px; }
+.certLinks a { color: var(--text-muted); }.certLinks a:hover { color: var(--yellow); }
+.rowActions { display: flex; flex-shrink: 0; align-items: center; gap: 6px; }
+
+/* Content editor */
+.editor { display: grid; grid-template-columns: 210px minmax(0, 1fr); gap: 36px; align-items: start; }
+.sectionList { position: sticky; top: 90px; display: grid; gap: 2px; }
+.sectionList button { display: flex; justify-content: space-between; align-items: center; gap: 8px; padding: 8px 12px; background: none; border: 0; border-radius: 6px; color: var(--text-muted); text-align: left; font-size: 14px; cursor: pointer; }
+.sectionList button:hover { color: var(--text-color); }
+.sectionList .sectionActive { background: var(--surface); color: var(--text-color); }
+.dot { width: 7px; height: 7px; border-radius: 50%; background: var(--yellow); flex-shrink: 0; }
+.editorBody { display: grid; gap: 6px; }
+.fields { display: grid; gap: 22px; margin: 22px 0 8px; }
+.fieldBlock { display: grid; gap: 8px; }
+.fieldLabel { font-size: 13px; font-weight: 500; color: var(--text-color); }
+.pair { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.localized { position: relative; display: block; }
+.localized > span { position: absolute; top: 9px; right: 9px; font-family: var(--font-mono); font-size: 10px; color: var(--text-muted); pointer-events: none; }
+.localized .input { padding-right: 32px; }
+.listRow { display: flex; align-items: flex-start; gap: 10px; }
+.listRow > .pair { flex: 1; }
+.groupItem { border: 1px solid var(--line); border-radius: 10px; }
+.groupHead { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 8px 10px 8px 14px; }
+.groupToggle { flex: 1; min-width: 0; background: none; border: 0; color: var(--text-color); font-size: 14px; text-align: left; cursor: pointer; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.groupToggle span { color: var(--text-muted); margin-right: 4px; }
+.groupBody { display: grid; gap: 18px; padding: 6px 14px 18px; border-top: 1px solid var(--line); padding-top: 16px; }
+.saveBar { position: sticky; bottom: 0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; padding: 16px 0; background: var(--bg-color); border-top: 1px solid var(--line); }
+.saveButtons { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
+
+@media (max-width: 800px) {
+  .headerInner { flex-wrap: wrap; gap: 12px 20px; padding: 12px 20px; }
+  .nav { order: 3; flex-basis: 100%; }
+  .main { padding: 24px 20px 64px; }
+  .pageHead { flex-direction: column; }
+  .grid2, .pair { grid-template-columns: 1fr; }
+  .certItem { flex-direction: column; align-items: flex-start; }
+  .editor { grid-template-columns: 1fr; gap: 20px; }
+  .sectionList { position: static; display: flex; overflow-x: auto; }
+  .sectionList button { white-space: nowrap; }
+}

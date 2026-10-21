@@ -17,6 +17,7 @@ export const tr = {
     "viewWork": "Projeleri keşfet",
     "downloadResume": "Özgeçmişimi İndir",
     "photoAlt": "Buğra Berat Kök",
+    "currentCompany": "Ailways",
     "currentRole": "Yazılım Geliştirici Stajyeri",
     "focus": [
       "Full-stack geliştirme",
@@ -288,6 +289,11 @@ export const tr = {
       "İngilizce — İleri seviye",
       "İspanyolca — A1 Sertifikası"
     ]
+  },
+  "certificates": {
+    "title": "Sertifikalar",
+    "view": "Sertifikayı gör",
+    "verify": "Doğrula"
   },
   "workbench": {
     "choose": "Bir kartuş seç",

@@ -9,7 +9,7 @@ export default function Experience() {
         <h2 className="section-title">{t.experience.title}</h2>
         <div>
           {t.experience.jobs.map((job, index) => (
-            <article key={job.company} className={styles.job}>
+            <article key={index} className={styles.job}>
               <div className={styles.jobMeta}><h3>{job.company}</h3><p>{job.date}</p>{index === 0 && <span className={styles.current}>{t.experience.current}</span>}</div>
               <div className={styles.jobContent}><h4>{job.title}</h4><ul>{job.description.map(desc => <li key={desc}>{desc}</li>)}</ul></div>
             </article>

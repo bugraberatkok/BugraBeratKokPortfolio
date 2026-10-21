@@ -10,8 +10,8 @@ export default function Education() {
       <div className="container">
         <h2 className="section-title">{t.education.title}</h2>
         <div className={styles.grid}>
-          {t.education.items.map((item) => (
-            <article key={item.degree} className={styles.card}>
+          {t.education.items.map((item, index) => (
+            <article key={index} className={styles.card}>
               <p className={styles.institution}>{item.institution}</p>
               <h3 className={styles.degree}>{item.degree}</h3>
               <p className={styles.date}>{item.date}</p>

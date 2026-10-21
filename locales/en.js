@@ -17,6 +17,7 @@ export const en = {
     "viewWork": "Explore projects",
     "downloadResume": "Download Resume",
     "photoAlt": "Buğra Berat Kök",
+    "currentCompany": "Ailways",
     "currentRole": "Software Developer Intern",
     "focus": [
       "Full-stack development",
@@ -288,6 +289,11 @@ export const en = {
       "English — Advanced",
       "Spanish — A1 Certificate"
     ]
+  },
+  "certificates": {
+    "title": "Certificates",
+    "view": "View certificate",
+    "verify": "Verify"
   },
   "workbench": {
     "choose": "Choose a cartridge",

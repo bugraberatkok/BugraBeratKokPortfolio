@@ -1,0 +1,5 @@
+.list { list-style: none; display: grid; gap: 20px; }
+.item { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; padding-left: 18px; border-left: 2px solid var(--line); }
+.copy { min-width: 0; }.copy h3 { font-size: 16px; line-height: 1.5; font-weight: 500; }.copy p { font-size: 13px; color: var(--text-muted); margin-top: 3px; }
+.links { display: flex; flex-shrink: 0; gap: 18px; font-size: 13px; padding-top: 2px; }.links span { color: var(--yellow); }.links a:hover { color: var(--yellow); }
+@media(max-width: 550px) { .item { flex-direction: column; gap: 8px; } }
