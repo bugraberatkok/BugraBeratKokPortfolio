@@ -1,20 +1,32 @@
 "use client";
 import styles from './Experience.module.css';
 import { useLanguage } from '../context/LanguageContext';
+
+// Jobs are listed newest first; the first one is the current role.
 export default function Experience() {
   const { t } = useLanguage();
   return (
-    <section id="experience">
-      <div className="container">
+    <section id="experience" className={`section ${styles.section}`}>
+      <div className="container split">
         <h2 className="section-title">{t.experience.title}</h2>
-        <div>
+        <ol className={styles.timeline}>
           {t.experience.jobs.map((job, index) => (
-            <article key={index} className={styles.job}>
-              <div className={styles.jobMeta}><h3>{job.company}</h3><p>{job.date}</p>{index === 0 && <span className={styles.current}>{t.experience.current}</span>}</div>
-              <div className={styles.jobContent}><h4>{job.title}</h4><ul>{job.description.map(desc => <li key={desc}>{desc}</li>)}</ul></div>
-            </article>
+            <li key={index} className={styles.job}>
+              <span className={`${styles.marker} ${index === 0 ? styles.markerCurrent : ''}`} aria-hidden="true" />
+              <div className={styles.head}>
+                <h3 className={styles.company}>{job.company}</h3>
+                <p className={styles.date}>{job.date}</p>
+              </div>
+              <p className={styles.title}>
+                {job.title}
+                {index === 0 && t.experience.current && <span className={styles.current}>{t.experience.current}</span>}
+              </p>
+              <ul className={styles.points}>
+                {job.description.map((point, i) => <li key={i}>{point}</li>)}
+              </ul>
+            </li>
           ))}
-        </div>
+        </ol>
       </div>
     </section>
   );

@@ -1,5 +1,22 @@
-.list { list-style: none; display: grid; gap: 20px; }
-.item { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; padding-left: 18px; border-left: 2px solid var(--line); }
-.copy { min-width: 0; }.copy h3 { font-size: 16px; line-height: 1.5; font-weight: 500; }.copy p { font-size: 13px; color: var(--text-muted); margin-top: 3px; }
-.links { display: flex; flex-shrink: 0; gap: 18px; font-size: 13px; padding-top: 2px; }.links span { color: var(--yellow); }.links a:hover { color: var(--yellow); }
-@media(max-width: 550px) { .item { flex-direction: column; gap: 8px; } }
+/* Follows Education on the same light surface, so a rule marks the boundary. */
+.section { padding-top: 0; }
+.section > :global(.container)::before { content: ''; grid-column: 1 / -1; height: 1px; margin-bottom: clamp(24px, 5vw, 64px); background: var(--line); }
+
+.list { list-style: none; }
+.item { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px 32px; padding: 20px 0; border-top: 1px solid var(--line); }
+.item:first-child { padding-top: 0; border-top: 0; }
+.title { font-size: 19px; }
+.meta { display: flex; flex-wrap: wrap; gap: 4px 16px; margin-top: 4px; font-size: 15px; color: var(--smoke); }
+.links { display: flex; flex-shrink: 0; gap: 20px; padding-top: 2px; }
+.links a {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--iris);
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 4px;
+}
+.links a:hover { color: var(--ink); }
+
+@media (max-width: 560px) { .item { flex-direction: column; } }

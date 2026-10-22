@@ -23,7 +23,7 @@ export default async function PanelLayout({ children }) {
         <form action={signOut} className={styles.card}>
           <h1 className={styles.cardTitle}>Yetkin yok</h1>
           <p className={styles.muted}>{user.email} hesabı admin olarak tanımlı değil.</p>
-          <button className="btn" type="submit">Çıkış yap</button>
+          <button className="btn btn-ghost" type="submit">Çıkış yap</button>
         </form>
       </div>
     );

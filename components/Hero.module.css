@@ -1,11 +1,64 @@
-.profile { position: sticky; top: 106px; align-self: start; padding: 28px; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); }
-.photo { width: 144px; height: 144px; border-radius: 50%; position: relative; overflow: hidden; margin-bottom: 24px; }
+.hero { margin-top: 4px; padding: clamp(56px, 8vw, 112px) 0; overflow: hidden; }
+.grid { display: grid; grid-template-columns: minmax(0, 8fr) minmax(0, 4fr); gap: 48px; align-items: center; }
+
+.name { font-size: 20px; letter-spacing: -.005em; color: var(--paper); }
+.role { margin-top: 4px; font-size: 16px; color: var(--mist); }
+.statement {
+  max-width: 16em;
+  margin-top: 28px;
+  font-family: var(--font-display);
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -.025em;
+  text-wrap: balance;
+}
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
+
+.now {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+  margin-top: 40px;
+  padding: 10px 18px 10px 14px;
+  border-radius: var(--radius-pill);
+  background: var(--night-raised);
+  font-size: 15px;
+  color: var(--mist);
+}
+.now strong { font-weight: 600; color: var(--paper); }
+.dot { width: 9px; height: 9px; border-radius: 50%; background: var(--lamp); box-shadow: 0 0 0 4px rgba(245, 200, 76, .18); }
+
+/* The one bold moment: a lamp-yellow disc partly eclipsed by the portrait. */
+.portrait { position: relative; width: min(100%, 340px); aspect-ratio: 1; justify-self: end; }
+.disc { position: absolute; top: 0; right: 0; width: 82%; aspect-ratio: 1; border-radius: 50%; background: var(--lamp); }
+.photo {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 74%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 10px solid var(--night);
+  background: var(--night-raised);
+}
 .photo img { object-fit: cover; object-position: center 28%; }
-.profile h1 { font-size: 28px; line-height: 1.2; font-weight: 600; letter-spacing: -.045em; }
-.role { color: var(--yellow); font-size: 14px; line-height: 1.6; margin-top: 12px; }
-.tagline { color: var(--text-muted); font-size: 14px; margin: 16px 0 22px; }
-.current { display: flex; flex-direction: column; font-size: 13px; gap: 3px; padding: 18px 0; border-top: 1px solid #3b424b; }
-.current strong { font-weight: 500; }.current span { color: var(--text-muted); }
-.profile > a { width: 100%; margin-top: 6px; }
-.socials { display: flex; gap: 22px; margin-top: 20px; font-size: 13px; }.socials a:hover { color: var(--yellow); }
-@media(max-width: 800px) { .profile { position: static; padding: 24px; }.photo { width: 112px; height: 112px; margin-bottom: 20px; }.profile h1 { font-size: 30px; } }
+
+/* Single page-load sequence: copy settles, then the disc rises behind the portrait. */
+@keyframes settle { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+@keyframes rise { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: none; } }
+.copy > * { animation: settle .6s cubic-bezier(.2, .7, .2, 1) both; }
+.copy > :nth-child(2) { animation-delay: .05s; }
+.copy > :nth-child(3) { animation-delay: .1s; }
+.copy > :nth-child(4) { animation-delay: .18s; }
+.copy > :nth-child(5) { animation-delay: .26s; }
+.photo { animation: settle .6s .1s cubic-bezier(.2, .7, .2, 1) both; }
+.disc { animation: rise .9s .25s cubic-bezier(.2, .7, .2, 1) both; }
+
+@media (max-width: 860px) {
+  .grid { grid-template-columns: 1fr; gap: 36px; }
+  .portrait { order: -1; width: 220px; justify-self: start; }
+  .photo { border-width: 7px; }
+}

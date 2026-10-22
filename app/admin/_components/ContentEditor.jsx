@@ -166,7 +166,7 @@ export default function ContentEditor({ initial, defaults }) {
             <button type="button" className="btn btn-primary" disabled={!dirty || pending} onClick={save}>
               {pending ? 'Kaydediliyor…' : 'Kaydet ve yayınla'}
             </button>
-            <button type="button" className="btn" disabled={!dirty || pending} onClick={() => replaceSection(activeKey, saved[activeKey])}>
+            <button type="button" className="btn btn-ghost" disabled={!dirty || pending} onClick={() => replaceSection(activeKey, saved[activeKey])}>
               Değişiklikleri geri al
             </button>
           </div>

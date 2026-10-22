@@ -1,5 +1,15 @@
-.content { display: block; }
-.text { font-size: 15px; color: var(--text-muted); max-width: 680px; }.text p + p { margin-top: 12px; }
-.toolkit { margin-top: 26px; padding: 22px; border: 1px solid var(--line); border-radius: 12px; display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 18px; }
-.toolkit h3 { grid-column: 1/-1; font-size: 14px; font-weight: 500; }.group h4 { font-size: 13px; font-weight: 500; margin-bottom: 6px; }.group p { font-size: 13px; color: var(--text-muted); line-height: 1.8; }
-@media(max-width: 550px) { .toolkit { grid-template-columns: 1fr; gap: 16px; }.group { display: grid; grid-template-columns: 76px 1fr; gap: 10px; } }
+.text { display: grid; gap: 18px; max-width: 38em; font-size: 19px; line-height: 1.6; }
+.text p:empty { display: none; }
+
+.toolkitTitle { margin-top: 56px; font-size: 20px; }
+.toolkit {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 24px;
+  margin-top: 20px;
+  padding: 28px;
+  border-radius: var(--radius-md);
+  background: var(--lilac);
+}
+.groupTitle { font-size: 15px; font-weight: 600; color: var(--iris); }
+.items { list-style: none; margin-top: 10px; display: grid; gap: 4px; font-size: 16px; }

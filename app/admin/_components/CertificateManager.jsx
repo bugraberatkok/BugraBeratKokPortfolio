@@ -171,7 +171,7 @@ function CertificateForm({ certificate, onClose }) {
       {error && <p className={styles.error} role="alert">{error}</p>}
       <div className={styles.formActions}>
         <button type="submit" className="btn btn-primary" disabled={busy}>{busy ? 'Kaydediliyor…' : 'Kaydet ve yayınla'}</button>
-        <button type="button" className="btn" disabled={busy} onClick={onClose}>Vazgeç</button>
+        <button type="button" className="btn btn-ghost" disabled={busy} onClick={onClose}>Vazgeç</button>
       </div>
     </form>
   );

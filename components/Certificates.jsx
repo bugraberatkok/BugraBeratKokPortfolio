@@ -16,19 +16,25 @@ export default function Certificates({ items }) {
   if (!items.length) return null;
 
   return (
-    <section id="certificates">
-      <div className="container">
+    <section id="certificates" className={`section ${styles.section}`}>
+      <div className="container split">
         <h2 className="section-title">{t.certificates.title}</h2>
         <ul className={styles.list}>
           {items.map(cert => {
             const title = (language === 'tr' ? cert.titleTr : cert.titleEn) || cert.titleTr || cert.titleEn;
-            const meta = [cert.issuer, formatIssuedOn(cert.issuedOn, language)].filter(Boolean).join(' · ');
+            const issuedOn = formatIssuedOn(cert.issuedOn, language);
             return (
               <li key={cert.id} className={styles.item}>
-                <div className={styles.copy}><h3>{title}</h3>{meta && <p>{meta}</p>}</div>
+                <div>
+                  <h3 className={styles.title}>{title}</h3>
+                  <p className={styles.meta}>
+                    {cert.issuer && <span>{cert.issuer}</span>}
+                    {issuedOn && <span>{issuedOn}</span>}
+                  </p>
+                </div>
                 <div className={styles.links}>
-                  {cert.fileUrl && <a href={cert.fileUrl} target="_blank" rel="noreferrer">{t.certificates.view} <span aria-hidden="true">↗</span></a>}
-                  {cert.credentialUrl && <a href={cert.credentialUrl} target="_blank" rel="noreferrer">{t.certificates.verify} <span aria-hidden="true">↗</span></a>}
+                  {cert.fileUrl && <a href={cert.fileUrl} target="_blank" rel="noreferrer">{t.certificates.view}<span className="sr-only">: {title}</span></a>}
+                  {cert.credentialUrl && <a href={cert.credentialUrl} target="_blank" rel="noreferrer">{t.certificates.verify}<span className="sr-only">: {title}</span></a>}
                 </div>
               </li>
             );

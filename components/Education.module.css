@@ -1,1 +1,10 @@
-.grid { display: grid; gap: 20px; }.card { padding-left: 18px; border-left: 2px solid var(--line); }.institution { font-size: 13px; color: var(--text-muted); }.degree { font-size: 16px; line-height: 1.5; font-weight: 500; margin: 5px 0; }.date { font-size: 13px; color: var(--gold); }.languages { margin-top: 26px; padding-top: 22px; border-top: 1px solid var(--line); }.languages h3 { font-size: 14px; font-weight: 500; margin-bottom: 12px; }.languageList { display: flex; flex-wrap: wrap; list-style: none; gap: 10px 24px; color: var(--text-muted); font-size: 13px; }
+.schools { list-style: none; }
+.school { padding: 24px 0; border-top: 1px solid var(--line); }
+.school:first-child { padding-top: 0; border-top: 0; }
+.institution { font-size: 15px; color: var(--smoke); }
+.degree { margin-top: 4px; font-size: 21px; }
+.date { margin-top: 6px; font-size: 15px; color: var(--iris); }
+
+.languagesTitle { margin-top: 48px; font-size: 20px; }
+.languages { list-style: none; display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+.languages li { padding: 8px 16px; border-radius: var(--radius-pill); background: var(--lilac); font-size: 15px; }

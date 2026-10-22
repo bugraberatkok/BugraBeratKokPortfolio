@@ -1,14 +1,15 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Wix_Madefor_Display, Wix_Madefor_Text } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+// Display + Text cuts of one family, mirroring Meta's Optimistic Display/Text split.
+const display = Wix_Madefor_Display({
+  variable: "--font-display-face",
+  subsets: ["latin", "latin-ext"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const text = Wix_Madefor_Text({
+  variable: "--font-text-face",
+  subsets: ["latin", "latin-ext"],
 });
 
 export const metadata = {
@@ -16,9 +17,13 @@ export const metadata = {
   description: "Full-stack and backend development, software architecture, and AI-integrated systems. Explore Buğra Berat Kök’s projects, internships, education, and technical experience.",
 };
 
+export const viewport = {
+  themeColor: "#FAF9FD",
+};
+
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html lang="en" suppressHydrationWarning className={`${display.variable} ${text.variable}`}>
       <body suppressHydrationWarning>
         {children}
       </body>
