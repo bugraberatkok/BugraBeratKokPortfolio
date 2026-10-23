@@ -89,7 +89,7 @@ export const tr = {
           "Gemini",
           "Supabase / PostgreSQL"
         ],
-        "github": "https://github.com/bugraberatkok/ailways-saglik-asistani",
+        "github": "",
         "category": "Ailways · AI ajanları",
         "shortTitle": "Şifa AI Asistanı",
         "highlights": [

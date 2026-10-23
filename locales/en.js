@@ -89,7 +89,7 @@ export const en = {
           "Gemini",
           "Supabase / PostgreSQL"
         ],
-        "github": "https://github.com/bugraberatkok/ailways-saglik-asistani",
+        "github": "",
         "category": "Ailways · AI agents",
         "shortTitle": "Şifa AI Assistant",
         "highlights": [
