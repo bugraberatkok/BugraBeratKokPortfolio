@@ -1,10 +1,15 @@
-.schools { list-style: none; }
-.school { padding: 24px 0; border-top: 1px solid var(--line); }
-.school:first-child { padding-top: 0; border-top: 0; }
-.institution { font-size: 15px; color: var(--smoke); }
-.degree { margin-top: 4px; font-size: 21px; }
-.date { margin-top: 6px; font-size: 15px; color: var(--iris); }
+.grid { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: 32px clamp(32px, 5vw, 72px); align-items: start; }
 
-.languagesTitle { margin-top: 48px; font-size: 20px; }
-.languages { list-style: none; display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+.schools { list-style: none; border-top: 1px solid var(--line); }
+.school { padding: 20px 0; border-bottom: 1px solid var(--line); }
+.degree { font-size: 20px; }
+.meta { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; margin-top: 6px; font-size: 15px; color: var(--smoke); }
+.date { color: var(--iris); }
+
+.languagesTitle { font-size: 20px; }
+.languages { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
 .languages li { padding: 8px 16px; border-radius: var(--radius-pill); background: var(--lilac); font-size: 15px; }
+
+@media (max-width: 760px) {
+  .grid { grid-template-columns: 1fr; }
+}

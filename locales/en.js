@@ -5,18 +5,19 @@ export const en = {
     "experience": "Experience",
     "contact": "Contact",
     "education": "Education",
-    "label": "Main navigation",
+    "label": "Main menu",
     "menu": "Menu",
-    "close": "Close"
+    "close": "Close",
+    "sectionsLabel": "Sections"
   },
   "hero": {
     "greeting": "Hi, I am",
     "name": "Buğra Berat Kök",
-    "title": "Software Engineering Student · Full-Stack Developer",
-    "tagline": "I build full-stack applications, backend systems, and AI integrations with a focus on software architecture.",
+    "title": "Software Engineering Student and Full-Stack Developer",
+    "tagline": "I build full-stack applications, backend systems, and AI integrations with software architecture at the center.",
     "viewWork": "Explore projects",
-    "downloadResume": "Download Resume",
-    "photoAlt": "Buğra Berat Kök",
+    "downloadResume": "Download resume",
+    "photoAlt": "Portrait of Buğra Berat Kök",
     "currentCompany": "Ailways",
     "currentRole": "Software Developer Intern",
     "focus": [
@@ -28,42 +29,89 @@ export const en = {
   },
   "about": {
     "title": "About Me",
-    "p1": "I’m a Software Engineering student at Bahçeşehir University. My work combines backend development, full-stack architecture, and AI-integrated systems.",
-    "p2": "I use AI to accelerate development while retaining responsibility for the architecture, code, and validation. My earlier game development work shaped my programming and system design foundations.",
-    "skillsTitle": "My toolkit",
+    "p1": "I am growing into a new kind of software engineer: one who designs the system, directs AI tools, and verifies the result.",
+    "p2": "Software architecture is where I am strongest. I started with game development, a path that went from Unity projects to a C++ game engine I wrote from scratch.",
+    "skillsTitle": "Capabilities",
     "p3": "",
     "skillGroups": [
       {
-        "title": "Build",
+        "title": "Architecture",
+        "description": "Clear module boundaries and a structure that is easy to extend.",
+        "items": [
+          "Modular & layered architecture",
+          "REST API design",
+          "Design patterns"
+        ]
+      },
+      {
+        "title": "Backend",
+        "description": "The server side, from the database to the API.",
         "items": [
           "Java",
           "Spring Boot",
-          "React",
-          "TypeScript",
+          "Node.js, Express",
+          "PHP, WordPress",
           "PostgreSQL"
         ]
       },
       {
-        "title": "Integrate",
+        "title": "Frontend",
+        "description": "Responsive, accessible web interfaces.",
         "items": [
-          "n8n",
-          "AI agents",
-          "API integration"
+          "TypeScript",
+          "JavaScript",
+          "React",
+          "Next.js",
+          "Tailwind CSS"
         ]
       },
       {
-        "title": "Validate",
+        "title": "AI & integration",
+        "description": "Connecting AI agents and APIs to real product flows.",
+        "items": [
+          "n8n",
+          "AI agents",
+          "LLM integration",
+          "Supabase",
+          "MCP"
+        ]
+      },
+      {
+        "title": "Testing",
+        "description": "Automated UI, API, and load testing.",
         "items": [
           "Selenium",
           "JUnit",
           "Postman",
-          "JMeter"
+          "JMeter",
+          "Jira"
+        ]
+      },
+      {
+        "title": "Tooling & deployment",
+        "description": "Version control, automated builds, and deployment.",
+        "items": [
+          "Git",
+          "GitHub Actions",
+          "Docker",
+          "Vercel"
+        ]
+      },
+      {
+        "title": "Games & graphics",
+        "description": "Game engines, rendering, and real-time loops.",
+        "items": [
+          "C++",
+          "SDL2",
+          "C#",
+          "Unity",
+          "Unreal Engine (Blueprints)"
         ]
       }
     ]
   },
   "projects": {
-    "title": "Selected Projects",
+    "title": "Projects",
     "items": [
       {
         "title": "Smart Chores Tracker",
@@ -86,7 +134,7 @@ export const en = {
         "description": "A conversational health assistant with a main agent and specialized sub-agents.",
         "tags": [
           "n8n",
-          "Gemini",
+          "LLM",
           "Supabase / PostgreSQL"
         ],
         "github": "",
@@ -115,7 +163,7 @@ export const en = {
       },
       {
         "title": "Football Analyzer AI",
-        "description": "Football statistics and AI-assisted match analysis through a structured backend.",
+        "description": "Collects live football statistics and uses Gemini to write pre-match tactical reports.",
         "tags": [
           "Spring Boot",
           "React",
@@ -131,11 +179,10 @@ export const en = {
       },
       {
         "title": "Focus — Custom C++ Game Engine",
-        "description": "A reusable 2D engine powering two playable games.",
+        "description": "A 2D game engine written from scratch, with two playable games built on it.",
         "tags": [
           "C++",
-          "SDL",
-          "OpenGL"
+          "SDL2"
         ],
         "github": "https://github.com/bugraberatkok/Focus-GameEngine-and-Two-Playable-Games",
         "category": "C++ · Game engine",
@@ -147,7 +194,7 @@ export const en = {
       },
       {
         "title": "FitTrack — Fitness & Nutrition Dashboard",
-        "description": "A full-stack fitness and nutrition tracking application.",
+        "description": "A full-stack app for tracking workouts and nutrition.",
         "tags": [
           "Spring Boot",
           "React",
@@ -162,8 +209,8 @@ export const en = {
         ]
       }
     ],
-    "intro": "A selection of systems I’ve designed, built, and tested.",
-    "viewSource": "View repository",
+    "intro": "Some of the systems I have designed, built, and tested.",
+    "viewSource": "View code on GitHub",
     "architectureTitle": "Inside Smart Chores Tracker",
     "interfaceLabel": "Interface",
     "apiLabel": "API & access",
@@ -171,10 +218,12 @@ export const en = {
     "households": "Households",
     "chores": "Chores",
     "rewards": "Rewards",
-    "deploymentLabel": "Delivery"
+    "deploymentLabel": "Delivery",
+    "prev": "Previous project",
+    "next": "Next project"
   },
   "experience": {
-    "title": "Professional Experience",
+    "title": "Experience",
     "certTitle": "Certificates",
     "issuer": "Issuer:",
     "date": "Issued Date:",
@@ -183,25 +232,48 @@ export const en = {
       {
         "company": "Ailways",
         "title": "Software Developer Intern",
-        "date": "14 September 2026 – Present",
+        "date": "Sep 2026 – Present",
+        "summary": "Building AI agent workflows and the architecture around them.",
         "description": [
-          "AI integrations, n8n agents, software architecture, Şifa, and WordPress Multisite."
+          "Design multi-agent workflows in n8n and decide how responsibilities are split between agents.",
+          "Integrate different LLMs into product flows, keeping agent prompts in the database and measuring token usage and latency in a separate test workflow.",
+          "Document architecture decisions and keep test and live environments apart.",
+          "Projects from this role: Şifa and the WordPress Multisite platform (see Projects)."
         ]
       },
       {
         "company": "Egemsoft",
         "title": "Software Testing / Test Automation Internship",
-        "date": "Summer 2026",
+        "date": "Jul – Aug 2026",
+        "summary": "Manual and automated testing across UI, API, and performance.",
         "description": [
-          "Java, Selenium, Postman, and JMeter for UI automation, API testing, and performance/load testing."
+          "Designed functional, integration, UAT, regression, and positive/negative test scenarios across Agile and Waterfall processes.",
+          "Managed the defect lifecycle and test plans in Jira, and validated data with SQL queries.",
+          "Automated UI tests with Selenium and Java, and tested APIs with Postman.",
+          "Ran performance and load tests with JMeter."
+        ]
+      },
+      {
+        "company": "TNC Group",
+        "title": "Project-Based Software Engineering Training",
+        "date": "Jul – Aug 2026",
+        "summary": "One project per module across web, mobile, database, and backend.",
+        "description": [
+          "Completed a project-based program covering web, mobile, database, and backend development.",
+          "Delivered a practical assignment and a technical project for each module.",
+          "Worked with JavaScript for the web, Android and iOS app development, SQL, and backend technologies."
         ]
       },
       {
         "company": "IdeaSoft",
         "title": "Frontend Developer Intern",
-        "date": "Six-month internship",
+        "date": "Mar – Sep 2025",
+        "summary": "Responsive WordPress sites and reusable UI components.",
         "description": [
-          "Responsive websites with WordPress, Elementor, HTML, CSS, and JavaScript."
+          "Built and customized responsive web pages with WordPress and Elementor.",
+          "Developed reusable UI components, animated sections, and interactive page elements with HTML, CSS, and JavaScript.",
+          "Applied on-page SEO improvements.",
+          "Worked with the team through daily meetings, task planning, and regular design reviews."
         ]
       }
     ],
@@ -249,17 +321,24 @@ export const en = {
         "file": "/certificates/databases.pdf"
       }
     ],
-    "current": "Current role"
+    "current": "Current",
+    "details": "Details"
   },
   "contact": {
-    "title": "Let’s build something together.",
-    "description": "",
+    "title": "Get in touch",
+    "description": "I am open to junior software engineer roles and internships. Email gets the fastest reply.",
     "name": "Name",
     "email": "Email",
     "message": "Message",
     "send": "Send Message",
     "footer": "Built with Next.js.",
-    "emailAction": "Email"
+    "emailAction": "Email",
+    "write": "Send an email",
+    "copy": "Copy",
+    "copied": "Copied",
+    "openProfile": "Open profile",
+    "resume": "Resume",
+    "download": "Download PDF"
   },
   "education": {
     "title": "Education & Languages",
@@ -267,27 +346,27 @@ export const en = {
       {
         "institution": "Bahçeşehir University",
         "degree": "B.Sc. Software Engineering",
-        "date": "Expected graduation: January 2027",
+        "date": "Graduating January 2027",
         "description": ""
       },
       {
         "institution": "Bahçeşehir University",
-        "degree": "Computer Education and Instructional Technology (CEIT) — Double Major",
-        "date": "Completed: June 2026",
+        "degree": "Computer Education and Instructional Technology (Double Major)",
+        "date": "Completed June 2026",
         "description": ""
       },
       {
-        "institution": "Universidad San Jorge",
-        "degree": "Erasmus Exchange · Zaragoza, Spain",
-        "date": "2025/2026",
+        "institution": "Universidad San Jorge, Spain",
+        "degree": "Erasmus Exchange, Zaragoza",
+        "date": "2025–2026",
         "description": ""
       }
     ],
     "languagesTitle": "Languages",
     "languages": [
-      "Turkish — Native",
-      "English — Advanced",
-      "Spanish — A1 Certificate"
+      "Turkish (native)",
+      "English (advanced)",
+      "Spanish (A1 certificate)"
     ]
   },
   "certificates": {

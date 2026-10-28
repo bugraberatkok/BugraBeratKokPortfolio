@@ -1,26 +1,17 @@
-.hero { margin-top: 4px; padding: clamp(56px, 8vw, 112px) 0; overflow: hidden; }
-.grid { display: grid; grid-template-columns: minmax(0, 8fr) minmax(0, 4fr); gap: 48px; align-items: center; }
+.hero { margin-top: 4px; padding: clamp(32px, 4.5vw, 64px) 0; }
+.grid { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: 40px clamp(32px, 5vw, 72px); align-items: center; }
 
-.name { font-size: 20px; letter-spacing: -.005em; color: var(--paper); }
-.role { margin-top: 4px; font-size: 16px; color: var(--mist); }
-.statement {
-  max-width: 16em;
-  margin-top: 28px;
-  font-family: var(--font-display);
-  font-size: clamp(32px, 4vw, 48px);
-  font-weight: 600;
-  line-height: 1.1;
-  letter-spacing: -.025em;
-  text-wrap: balance;
-}
-.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
+/* Identity: the name and what I do lead the page. */
+.name { font-size: clamp(36px, 4.4vw, 56px); line-height: 1.02; letter-spacing: -.035em; color: var(--paper); }
+.role { margin-top: 10px; font-size: 17px; color: var(--mist); }
+.tagline { max-width: 26em; margin-top: 18px; font-size: clamp(17px, 1.4vw, 19px); line-height: 1.5; color: var(--paper); }
+.actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 14px; margin-top: 26px; }
 
 .now {
   display: inline-flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 4px 10px;
-  margin-top: 40px;
   padding: 10px 18px 10px 14px;
   border-radius: var(--radius-pill);
   background: var(--night-raised);
@@ -28,37 +19,69 @@
   color: var(--mist);
 }
 .now strong { font-weight: 600; color: var(--paper); }
-.dot { width: 9px; height: 9px; border-radius: 50%; background: var(--lamp); box-shadow: 0 0 0 4px rgba(245, 200, 76, .18); }
+.dot { width: 9px; height: 9px; border-radius: 50%; background: var(--lamp); }
 
-/* The one bold moment: a lamp-yellow disc partly eclipsed by the portrait. */
-.portrait { position: relative; width: min(100%, 340px); aspect-ratio: 1; justify-self: end; }
-.disc { position: absolute; top: 0; right: 0; width: 82%; aspect-ratio: 1; border-radius: 50%; background: var(--lamp); }
-.photo {
+/*
+  One card, two halves: portrait on the left, section rows on the right.
+  Hairlines (the card background showing through 1px gaps) separate every part.
+*/
+.card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 1px;
+  aspect-ratio: 5 / 4;
+  overflow: hidden;
+  border: 1px solid var(--night-line);
+  border-radius: var(--radius-lg);
+  background: var(--night-line);
+}
+.photo { position: relative; background: var(--night-raised); }
+.photo img { object-fit: cover; object-position: center 22%; }
+
+.rows { display: flex; flex-direction: column; gap: 1px; }
+.row {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 clamp(18px, 2vw, 28px);
+  background: var(--night-raised);
+  color: var(--paper);
+  transition: background-color .25s, color .25s;
+}
+.label { font-family: var(--font-display); font-size: clamp(18px, 1.7vw, 22px); font-weight: 600; letter-spacing: -.015em; }
+.count { padding: 1px 9px; border: 1px solid rgba(250, 249, 253, .25); border-radius: var(--radius-pill); font-size: 13px; color: var(--mist); }
+
+/* A lamp-yellow edge slides in on the left of the row you point at. */
+.row::before {
+  content: '';
   position: absolute;
   left: 0;
+  top: 0;
   bottom: 0;
-  width: 74%;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 10px solid var(--night);
-  background: var(--night-raised);
+  width: 4px;
+  background: var(--lamp);
+  transform: scaleY(0);
+  transition: transform .3s cubic-bezier(.2, .7, .2, 1);
 }
-.photo img { object-fit: cover; object-position: center 28%; }
+.row:hover, .row:focus-visible { background: var(--iris); outline: none; }
+.row:hover::before, .row:focus-visible::before { transform: scaleY(1); }
+.row:hover .count, .row:focus-visible .count { color: var(--paper); border-color: rgba(250, 249, 253, .45); }
 
-/* Single page-load sequence: copy settles, then the disc rises behind the portrait. */
-@keyframes settle { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
-@keyframes rise { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: none; } }
-.copy > * { animation: settle .6s cubic-bezier(.2, .7, .2, 1) both; }
-.copy > :nth-child(2) { animation-delay: .05s; }
-.copy > :nth-child(3) { animation-delay: .1s; }
-.copy > :nth-child(4) { animation-delay: .18s; }
-.copy > :nth-child(5) { animation-delay: .26s; }
-.photo { animation: settle .6s .1s cubic-bezier(.2, .7, .2, 1) both; }
-.disc { animation: rise .9s .25s cubic-bezier(.2, .7, .2, 1) both; }
+/* Single page-load sequence: identity settles, then the card and its rows arrive in order. */
+@keyframes settle { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+@keyframes appear { from { opacity: 0; } to { opacity: 1; } }
+.identity > * { animation: settle .6s cubic-bezier(.2, .7, .2, 1) both; }
+.card { animation: settle .6s .08s cubic-bezier(.2, .7, .2, 1) both; }
+.row { animation: appear .4s calc(.25s + var(--i) * .06s) ease-out both; }
 
 @media (max-width: 860px) {
-  .grid { grid-template-columns: 1fr; gap: 36px; }
-  .portrait { order: -1; width: 220px; justify-self: start; }
-  .photo { border-width: 7px; }
+  .grid { grid-template-columns: 1fr; }
+  .card { width: min(100%, 480px); }
+}
+@media (max-width: 480px) {
+  .card { grid-template-columns: minmax(0, 4fr) minmax(0, 5fr); aspect-ratio: 1; border-radius: var(--radius-md); }
+  .row { padding: 0 16px; }
+  .label { font-size: 17px; }
 }

@@ -15,9 +15,9 @@ export const revalidate = 3600;
 export default async function Home() {
   const [content, certificates] = await Promise.all([getSiteContent(), getCertificates()]);
   return (<LanguageProvider content={content}>
-    <Navbar />
+    <Navbar hasCertificates={certificates.length > 0} />
     <main>
-      <Hero />
+      <Hero certificates={certificates} />
       <About />
       <Experience />
       <Projects />

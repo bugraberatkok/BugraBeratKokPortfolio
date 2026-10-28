@@ -1,12 +1,50 @@
-.panel { padding: clamp(72px, 10vw, 128px) 0; }
-.inner { display: grid; justify-items: start; }
-.title {
-  max-width: 14em;
-  font-size: clamp(36px, 5vw, 60px);
-  line-height: 1.05;
-  letter-spacing: -.03em;
-  text-wrap: balance;
+.panel { padding: clamp(56px, 7vw, 96px) 0; }
+.layout { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 32px clamp(32px, 6vw, 96px); align-items: start; }
+
+.title { font-size: clamp(34px, 4.4vw, 52px); line-height: 1.05; letter-spacing: -.03em; }
+.description { max-width: 26em; margin-top: 16px; font-size: 18px; color: var(--mist); }
+
+/* Each channel is one row; the whole row opens the channel, the copy button sits above that link. */
+.channels { list-style: none; border-top: 1px solid var(--night-line); }
+.channel {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: 4px 18px;
+  padding: 20px 8px;
+  border-bottom: 1px solid var(--night-line);
+  transition: background-color .2s;
 }
-.description { max-width: 32em; margin-top: 16px; font-size: 18px; color: var(--mist); }
-.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 40px; }
-.email { margin-top: 20px; font-size: 15px; color: var(--mist); user-select: all; }
+.channel:hover { background: var(--night-raised); }
+
+.text { display: grid; gap: 2px; min-width: 0; }
+.link { font-family: var(--font-display); font-size: 21px; font-weight: 600; color: var(--paper); }
+.link::after { content: ''; position: absolute; inset: 0; }
+.link:focus-visible { outline: none; }
+.channel:has(.link:focus-visible) { outline: 3px solid var(--lamp); outline-offset: -3px; border-radius: 4px; }
+.value { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 15px; color: var(--mist); }
+
+.action { font-family: var(--font-display); font-size: 15px; font-weight: 600; color: var(--lamp); }
+
+.copy {
+  position: relative;
+  z-index: 1;
+  min-height: 36px;
+  padding: 0 14px;
+  border: 1px solid var(--night-line);
+  border-radius: var(--radius-pill);
+  background: var(--night);
+  font-size: 14px;
+  color: var(--paper);
+  cursor: pointer;
+}
+.copy:hover { border-color: var(--mist); }
+
+@media (max-width: 860px) {
+  .layout { grid-template-columns: 1fr; }
+}
+@media (max-width: 520px) {
+  .channel { grid-template-columns: minmax(0, 1fr) auto; }
+  .action { display: none; }
+}

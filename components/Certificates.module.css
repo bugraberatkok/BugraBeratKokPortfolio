@@ -1,10 +1,5 @@
-/* Follows Education on the same light surface, so a rule marks the boundary. */
-.section { padding-top: 0; }
-.section > :global(.container)::before { content: ''; grid-column: 1 / -1; height: 1px; margin-bottom: clamp(24px, 5vw, 64px); background: var(--line); }
-
-.list { list-style: none; }
-.item { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px 32px; padding: 20px 0; border-top: 1px solid var(--line); }
-.item:first-child { padding-top: 0; border-top: 0; }
+.list { list-style: none; border-top: 1px solid var(--line); }
+.item { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px 32px; padding: 20px 0; border-bottom: 1px solid var(--line); }
 .title { font-size: 19px; }
 .meta { display: flex; flex-wrap: wrap; gap: 4px 16px; margin-top: 4px; font-size: 15px; color: var(--smoke); }
 .links { display: flex; flex-shrink: 0; gap: 20px; padding-top: 2px; }

@@ -16,8 +16,8 @@ export default function Certificates({ items }) {
   if (!items.length) return null;
 
   return (
-    <section id="certificates" className={`section ${styles.section}`}>
-      <div className="container split">
+    <section id="certificates" className="section">
+      <div className="container">
         <h2 className="section-title">{t.certificates.title}</h2>
         <ul className={styles.list}>
           {items.map(cert => {

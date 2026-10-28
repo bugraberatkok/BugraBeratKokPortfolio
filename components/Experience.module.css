@@ -1,31 +1,65 @@
-/* Follows About on the same light surface, so a rule marks the boundary. */
-.section { padding-top: 0; }
-.section > :global(.container)::before { content: ''; grid-column: 1 / -1; height: 1px; margin-bottom: clamp(24px, 5vw, 64px); background: var(--line); }
-
-.timeline { list-style: none; display: grid; gap: 40px; padding-left: 32px; border-left: 2px solid var(--line); }
-.job { position: relative; }
-.marker {
-  position: absolute;
-  top: 7px;
-  left: -42px;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  border: 2px solid var(--iris);
-  background: var(--paper);
+.timeline { list-style: none; border-top: 1px solid var(--line); }
+.job {
+  display: grid;
+  grid-template-columns: 200px minmax(0, 1fr);
+  gap: 8px 32px;
+  padding: 28px 24px;
+  border-bottom: 1px solid var(--line);
+  border-radius: 0;
+  transition: background-color .3s, border-radius .3s, color .3s;
 }
-.markerCurrent { border-color: var(--night); background: var(--lamp); }
 
-.head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 16px; }
+/* The role whose details are open turns purple; colours flip to stay readable on it. */
+.job:has(.details[open]) { border-bottom-color: transparent; border-radius: var(--radius-md); background: var(--iris); color: var(--paper); }
+.job:has(.details[open]) .date,
+.job:has(.details[open]) .title,
+.job:has(.details[open]) .points { color: var(--lilac); }
+.job:has(.details[open]) .summary,
+.job:has(.details[open]) .details summary { color: var(--paper); }
+.job:has(.details[open]) .count { background: rgba(250, 249, 253, .18); color: var(--paper); }
+.job:has(.details[open]) .points li::before { background: var(--lamp); }
+
+.date { padding-top: 4px; font-size: 15px; color: var(--smoke); }
+
+.body { max-width: 44em; }
+.head { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
 .company { font-size: 24px; }
-.date { font-size: 15px; color: var(--smoke); }
-.title { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin-top: 4px; font-size: 17px; font-weight: 600; color: var(--iris); }
-.current {
-  padding: 2px 10px;
-  border-radius: var(--radius-pill);
-  background: var(--night);
-  color: var(--paper);
-  font-size: 13px;
+.current { padding: 2px 10px; border-radius: var(--radius-pill); background: var(--lamp); color: var(--night); font-size: 13px; font-weight: 600; }
+.title { margin-top: 2px; font-size: 17px; font-weight: 600; color: var(--iris); }
+.summary { margin-top: 8px; color: var(--ink); }
+
+.details { margin-top: 12px; }
+.details summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 0;
+  list-style: none;
+  font-family: var(--font-display);
+  font-size: 15px;
   font-weight: 600;
+  color: var(--iris);
+  cursor: pointer;
 }
-.points { list-style: none; display: grid; gap: 6px; margin-top: 12px; max-width: 40em; color: var(--smoke); }
+.details summary::-webkit-details-marker { display: none; }
+.details summary::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(-45deg);
+  transition: transform .2s;
+}
+.details[open] summary::before { transform: rotate(45deg); }
+.details summary:hover { color: var(--ink); }
+.count { padding: 0 8px; border-radius: var(--radius-pill); background: var(--lilac); font-size: 13px; color: var(--smoke); }
+
+.points { list-style: none; display: grid; gap: 8px; margin-top: 10px; color: var(--smoke); }
+.points li { position: relative; padding-left: 20px; }
+.points li::before { content: ''; position: absolute; left: 2px; top: .8em; width: 8px; height: 2px; border-radius: 2px; background: var(--iris); }
+
+@media (max-width: 700px) {
+  .job { grid-template-columns: 1fr; gap: 4px; }
+  .date { padding-top: 0; }
+}
