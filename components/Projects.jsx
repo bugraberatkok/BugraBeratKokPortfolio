@@ -1,5 +1,6 @@
 "use client";
 import { useRef, useState } from 'react';
+import Image from 'next/image';
 import styles from './Projects.module.css';
 import { useLanguage } from '../context/LanguageContext';
 
@@ -78,6 +79,11 @@ export default function Projects() {
               aria-hidden={!isActive}
               onClick={isActive ? undefined : () => go(index)}
             >
+              {project.image && (
+                <div className={styles.media}>
+                  <Image src={project.image} alt={project.imageAlt || ''} fill sizes="(max-width: 700px) 84vw, 560px" />
+                </div>
+              )}
               {project.category && <p className={styles.category}>{project.category}</p>}
               <h3 className={styles.title}>{project.title}</h3>
               <p className={styles.description}>{project.description}</p>

@@ -22,18 +22,21 @@
 .position { min-width: 3.5em; text-align: center; font-family: var(--font-display); font-size: 15px; font-weight: 600; color: var(--mist); font-variant-numeric: tabular-nums; }
 
 /*
-  All cards share one grid cell, so the stage is as tall as the tallest card and never jumps.
+  All cards share one grid cell, so the stage is as tall as the tallest card and never jumps;
+  shorter cards (no screenshot yet) sit centred in it.
   Each card is shifted by its distance from the active one.
 */
 .stage { display: grid; justify-items: center; padding: 4px 0 8px; outline: none; }
 .stage:focus-visible .active { outline: 3px solid var(--lamp); outline-offset: 4px; }
 
 .card {
+  --pad: clamp(24px, 3vw, 36px);
   grid-area: 1 / 1;
+  align-self: center;
   display: flex;
   flex-direction: column;
   width: min(560px, 78vw);
-  padding: clamp(24px, 3vw, 36px);
+  padding: var(--pad);
   border-radius: var(--radius-md);
   background: var(--night-raised);
   transform: translateX(calc(var(--offset) * 82%)) scale(.86);
@@ -44,6 +47,17 @@
 }
 .active { z-index: 1; transform: none; filter: none; opacity: 1; background: var(--iris); cursor: auto; }
 .hidden { opacity: 0; pointer-events: none; }
+
+/* A 16:9 screenshot runs edge to edge across the top of the card. */
+.media {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  margin: calc(-1 * var(--pad)) calc(-1 * var(--pad)) 22px;
+  overflow: hidden;
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+  background: var(--night);
+}
+.media img { object-fit: cover; object-position: top; }
 
 .category { font-size: 14px; font-weight: 600; color: var(--iris-soft); }
 .active .category { color: var(--lilac); }

@@ -122,6 +122,8 @@ export const tr = {
           "PostgreSQL"
         ],
         "github": "https://github.com/bugraberatkok/SmartChoresTracker",
+        "image": "/projects/smart-chores-tracker.png",
+        "imageAlt": "Smart Chores Tracker’da bir ev üyesinin günlük görev paneli: puanlar, seri ve haftalık takvim",
         "category": "Bitirme projesi",
         "shortTitle": "Smart Chores Tracker",
         "highlights": [
@@ -201,6 +203,8 @@ export const tr = {
           "H2"
         ],
         "github": "https://github.com/bugraberatkok/fitness-web-app",
+        "image": "/projects/fittrack.png",
+        "imageAlt": "FitTrack panelinde günün kalori özeti, ilerleme halkası ve son aktiviteler",
         "category": "Sağlık ve fitness",
         "shortTitle": "FitTrack",
         "highlights": [

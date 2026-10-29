@@ -122,6 +122,8 @@ export const en = {
           "PostgreSQL"
         ],
         "github": "https://github.com/bugraberatkok/SmartChoresTracker",
+        "image": "/projects/smart-chores-tracker.png",
+        "imageAlt": "A household member’s daily chore dashboard in Smart Chores Tracker, with points, streak and a weekly calendar",
         "category": "Capstone",
         "shortTitle": "Smart Chores Tracker",
         "highlights": [
@@ -201,6 +203,8 @@ export const en = {
           "H2"
         ],
         "github": "https://github.com/bugraberatkok/fitness-web-app",
+        "image": "/projects/fittrack.png",
+        "imageAlt": "FitTrack dashboard with the day’s calorie summary, a progress ring and recent activity",
         "category": "Fitness & nutrition",
         "shortTitle": "FitTrack",
         "highlights": [
