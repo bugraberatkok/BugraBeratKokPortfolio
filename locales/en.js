@@ -167,7 +167,7 @@ export const en = {
           "Content Studio",
           "MCP experimentation"
         ],
-        "github": "https://github.com/bugraberatkok/demo-wordpress-multisite",
+        "github": "",
         "category": "Ailways · Infrastructure",
         "shortTitle": "WordPress Multisite",
         "highlights": [

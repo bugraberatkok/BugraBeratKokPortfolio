@@ -167,7 +167,7 @@ export const tr = {
           "Content Studio",
           "MCP denemeleri"
         ],
-        "github": "https://github.com/bugraberatkok/demo-wordpress-multisite",
+        "github": "",
         "category": "Ailways · Altyapı",
         "shortTitle": "WordPress Multisite",
         "highlights": [
