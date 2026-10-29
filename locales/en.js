@@ -416,14 +416,14 @@ export const en = {
     "items": [
       {
         "institution": "Bahçeşehir University",
-        "degree": "B.Sc. Software Engineering",
-        "date": "Graduating January 2027",
+        "degree": "B.Sc. Software Engineering (Double Major)",
+        "date": "2022 – January 2027 (expected)",
         "description": ""
       },
       {
         "institution": "Bahçeşehir University",
-        "degree": "Computer Education and Instructional Technology (Double Major)",
-        "date": "Completed June 2026",
+        "degree": "B.Sc. Computer Education and Instructional Technology",
+        "date": "2021 – June 2026 (completed)",
         "description": ""
       },
       {

@@ -416,14 +416,14 @@ export const tr = {
     "items": [
       {
         "institution": "Bahçeşehir Üniversitesi",
-        "degree": "Yazılım Mühendisliği (Lisans)",
-        "date": "Mezuniyet: Ocak 2027",
+        "degree": "Yazılım Mühendisliği (Çift Anadal)",
+        "date": "2022 – Ocak 2027 (mezuniyet)",
         "description": ""
       },
       {
         "institution": "Bahçeşehir Üniversitesi",
-        "degree": "Bilgisayar ve Öğretim Teknolojileri Eğitimi (Çift Anadal)",
-        "date": "Haziran 2026’da tamamlandı",
+        "degree": "Bilgisayar ve Öğretim Teknolojileri Eğitimi (Lisans)",
+        "date": "2021 – Haziran 2026 (tamamlandı)",
         "description": ""
       },
       {
