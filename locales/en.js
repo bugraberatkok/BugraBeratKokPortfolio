@@ -304,11 +304,10 @@ export const en = {
         "company": "Ailways",
         "title": "Software Developer Intern",
         "date": "Sep 2026 – Present",
-        "summary": "Building AI agent workflows and the architecture around them.",
+        "summary": "Building features for an AI assistant product for e-commerce businesses.",
         "description": [
-          "Design multi-agent workflows in n8n and decide how responsibilities are split between agents.",
-          "Integrate different LLMs into product flows, keeping agent prompts in the database and measuring token usage and latency in a separate test workflow.",
-          "Document architecture decisions and keep test and live environments apart.",
+          "Contribute to new features of Ailways’ AI assistant product, which lets e-commerce businesses set up, customize, and manage their own assistants from our panel.",
+          "Delivered a WordPress Multisite platform for a client, now in use: independent sites managed from one panel with a custom content plugin, live preview, and SEO tools.",
           "Projects from this role: Şifa and the WordPress Multisite platform (see Projects)."
         ]
       },
