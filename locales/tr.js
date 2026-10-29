@@ -168,6 +168,20 @@ export const tr = {
           "MCP denemeleri"
         ],
         "github": "",
+        "images": [
+          {
+            "src": "/projects/wordpress-1.png",
+            "alt": "İçerik Stüdyosu: soldaki alanlar düzenlenirken ortada sitenin canlı önizlemesi güncelleniyor (örnek site)"
+          },
+          {
+            "src": "/projects/wordpress-2.png",
+            "alt": "Aynı panelden başka tasarımdaki bir sitenin kartları düzenleniyor (örnek site)"
+          },
+          {
+            "src": "/projects/wordpress-3.png",
+            "alt": "SEO ve GEO sayfası: arama sonucu önizlemesi, uyumluluk puanı ve eksik bilgiler listesi"
+          }
+        ],
         "category": "Ailways · Altyapı",
         "shortTitle": "WordPress Multisite",
         "highlights": [

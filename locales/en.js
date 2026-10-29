@@ -168,6 +168,20 @@ export const en = {
           "MCP experimentation"
         ],
         "github": "",
+        "images": [
+          {
+            "src": "/projects/wordpress-1.png",
+            "alt": "Content Studio: fields on the left update the live preview of the site in the middle (sample site)"
+          },
+          {
+            "src": "/projects/wordpress-2.png",
+            "alt": "Editing the cards of a differently designed site from the same panel (sample site)"
+          },
+          {
+            "src": "/projects/wordpress-3.png",
+            "alt": "SEO and GEO page with a search result preview, a compliance score and a list of missing details"
+          }
+        ],
         "category": "Ailways · Infrastructure",
         "shortTitle": "WordPress Multisite",
         "highlights": [
