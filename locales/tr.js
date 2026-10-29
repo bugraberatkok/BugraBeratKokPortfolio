@@ -152,6 +152,20 @@ export const tr = {
           "Supabase / PostgreSQL"
         ],
         "github": "",
+        "images": [
+          {
+            "src": "/projects/sifa-1.png",
+            "alt": "Şifa randevu akışı: boş saatler veritabanından geliyor, seçilen saatle randevu oluşturuluyor (sentetik kullanıcı)"
+          },
+          {
+            "src": "/projects/sifa-2.png",
+            "alt": "Semptom analizi: Şifa önce yaş ve geçmişi öğrenip profile kaydediyor, ardından aciliyeti belirliyor"
+          },
+          {
+            "src": "/projects/sifa-3.png",
+            "alt": "Acil durum: kritik bir ifadede asistan kullanıcıyı hemen 112'ye yönlendiriyor"
+          }
+        ],
         "category": "Ailways · Yapay zekâ ajanları",
         "shortTitle": "Şifa AI Asistanı",
         "highlights": [

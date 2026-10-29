@@ -152,6 +152,20 @@ export const en = {
           "Supabase / PostgreSQL"
         ],
         "github": "",
+        "images": [
+          {
+            "src": "/projects/sifa-1.png",
+            "alt": "Şifa booking flow: free slots come from the database and the chosen slot becomes an appointment (synthetic user)"
+          },
+          {
+            "src": "/projects/sifa-2.png",
+            "alt": "Symptom analysis: Şifa first learns age and history, saves them to the profile, then sets the urgency"
+          },
+          {
+            "src": "/projects/sifa-3.png",
+            "alt": "Emergency: a critical phrase gets the user an immediate referral to 112"
+          }
+        ],
         "category": "Ailways · AI agents",
         "shortTitle": "Şifa AI Assistant",
         "highlights": [
