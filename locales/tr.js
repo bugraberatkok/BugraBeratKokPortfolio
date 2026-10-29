@@ -122,8 +122,20 @@ export const tr = {
           "PostgreSQL"
         ],
         "github": "https://github.com/bugraberatkok/SmartChoresTracker",
-        "image": "/projects/smart-chores-tracker.png",
-        "imageAlt": "Smart Chores Tracker’da bir ev üyesinin günlük görev paneli: puanlar, seri ve haftalık takvim",
+        "images": [
+          {
+            "src": "/projects/smart-chores-tracker-1.png",
+            "alt": "Smart Chores Tracker’da bir ev üyesinin günlük görev paneli: puanlar, seri ve haftalık takvim"
+          },
+          {
+            "src": "/projects/smart-chores-tracker-2.png",
+            "alt": "Haftalık ilerleme grafiği, tamamlanan görevler ve toplam puan"
+          },
+          {
+            "src": "/projects/smart-chores-tracker-3.png",
+            "alt": "Rozet dolabı: kazanılan ve sıradaki başarımlar"
+          }
+        ],
         "category": "Bitirme projesi",
         "shortTitle": "Smart Chores Tracker",
         "highlights": [
@@ -203,8 +215,20 @@ export const tr = {
           "H2"
         ],
         "github": "https://github.com/bugraberatkok/fitness-web-app",
-        "image": "/projects/fittrack.png",
-        "imageAlt": "FitTrack panelinde günün kalori özeti, ilerleme halkası ve son aktiviteler",
+        "images": [
+          {
+            "src": "/projects/fittrack-1.png",
+            "alt": "FitTrack panelinde günün kalori özeti, ilerleme halkası ve son aktiviteler"
+          },
+          {
+            "src": "/projects/fittrack-2.png",
+            "alt": "Haftalık antrenman takvimi ve kaydedilen hareketler"
+          },
+          {
+            "src": "/projects/fittrack-3.png",
+            "alt": "Öğün kayıtları ve kalori toplamları"
+          }
+        ],
         "category": "Sağlık ve fitness",
         "shortTitle": "FitTrack",
         "highlights": [
@@ -224,7 +248,12 @@ export const tr = {
     "rewards": "Ödüller",
     "deploymentLabel": "Dağıtım",
     "prev": "Önceki proje",
-    "next": "Sonraki proje"
+    "next": "Sonraki proje",
+    "screenshot": "Ekran görüntüsü",
+    "enlarge": "Ekran görüntüsünü büyüt",
+    "prevShot": "Önceki görsel",
+    "nextShot": "Sonraki görsel",
+    "close": "Kapat"
   },
   "experience": {
     "title": "Deneyim",

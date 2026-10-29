@@ -6,16 +6,22 @@ import { useLanguage } from '../context/LanguageContext';
 
 // Focus carousel: the selected project sits in the middle, its neighbours wait blurred on either side.
 // Move with the arrow buttons, the keyboard arrow keys, a swipe, or by clicking a neighbour.
+// Projects with screenshots show them at the top of the card; the active card lets you flip through
+// them and open the current one in a full-size viewer.
 export default function Projects() {
   const { t } = useLanguage();
   const items = t.projects.items;
   const count = items.length;
   const [active, setActive] = useState(0);
+  const [shot, setShot] = useState(0);
   const touchStart = useRef(null);
+  const viewer = useRef(null);
 
-  const go = index => setActive((index + count) % count);
+  const shots = items[active]?.images ?? [];
+  const go = index => { setActive((index + count) % count); setShot(0); };
   // Relative moves build on the latest state, so key repeats and quick clicks never get lost.
-  const move = delta => setActive(current => (current + delta + count) % count);
+  const move = delta => { setActive(current => (current + delta + count) % count); setShot(0); };
+  const moveShot = delta => setShot(current => (current + delta + shots.length) % shots.length);
   // Shortest signed distance from the active card, so the list wraps around in both directions.
   const offsetOf = index => {
     let offset = index - active;
@@ -34,6 +40,12 @@ export default function Projects() {
     const distance = event.changedTouches[0].clientX - touchStart.current;
     if (Math.abs(distance) > 40) move(distance < 0 ? 1 : -1);
     touchStart.current = null;
+  }
+
+  function onViewerKeyDown(event) {
+    if (shots.length < 2) return;
+    if (event.key === 'ArrowRight') { event.preventDefault(); moveShot(1); }
+    if (event.key === 'ArrowLeft') { event.preventDefault(); moveShot(-1); }
   }
 
   return (
@@ -69,6 +81,8 @@ export default function Projects() {
         {items.map((project, index) => {
           const offset = offsetOf(index);
           const isActive = offset === 0;
+          const images = project.images ?? [];
+          const image = images[isActive ? Math.min(shot, images.length - 1) : 0];
           return (
             <article
               key={index}
@@ -79,9 +93,29 @@ export default function Projects() {
               aria-hidden={!isActive}
               onClick={isActive ? undefined : () => go(index)}
             >
-              {project.image && (
+              {image && (
                 <div className={styles.media}>
-                  <Image src={project.image} alt={project.imageAlt || ''} fill sizes="(max-width: 700px) 84vw, 560px" />
+                  {isActive ? (
+                    <button type="button" className={styles.mediaButton} onClick={() => viewer.current?.showModal()} aria-label={`${t.projects.enlarge}: ${image.alt}`}>
+                      <Image src={image.src} alt="" fill sizes="(max-width: 700px) 84vw, 560px" quality={90} />
+                    </button>
+                  ) : (
+                    <Image src={image.src} alt="" fill sizes="(max-width: 700px) 84vw, 560px" quality={90} />
+                  )}
+                  {isActive && images.length > 1 && (
+                    <div className={styles.shots}>
+                      {images.map((_, i) => (
+                        <button
+                          key={i}
+                          type="button"
+                          className={styles.shotDot}
+                          aria-label={`${t.projects.screenshot} ${i + 1} / ${images.length}`}
+                          aria-pressed={i === shot}
+                          onClick={() => setShot(i)}
+                        />
+                      ))}
+                    </div>
+                  )}
                 </div>
               )}
               {project.category && <p className={styles.category}>{project.category}</p>}
@@ -106,6 +140,38 @@ export default function Projects() {
           );
         })}
       </div>
+
+      {/* Full-size viewer for the active project's screenshots; Esc or a click outside closes it. */}
+      <dialog
+        ref={viewer}
+        className={styles.viewer}
+        aria-label={items[active]?.title}
+        onKeyDown={onViewerKeyDown}
+        onClick={event => { if (event.target === event.currentTarget) event.currentTarget.close(); }}
+      >
+        {shots[shot] && (
+          <figure className={styles.viewerFigure}>
+            <Image src={shots[shot].src} alt={shots[shot].alt} width={1600} height={900} sizes="(max-width: 1240px) 94vw, 1200px" quality={90} className={styles.viewerImage} />
+            <figcaption className={styles.viewerCaption}>
+              <span>{shots[shot].alt}</span>
+              {shots.length > 1 && <span className={styles.position}>{shot + 1} / {shots.length}</span>}
+            </figcaption>
+          </figure>
+        )}
+        <div className={styles.viewerBar}>
+          {shots.length > 1 && (
+            <div className={styles.controls}>
+              <button type="button" onClick={() => moveShot(-1)} aria-label={t.projects.prevShot}>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5 8 12l7 7" /></svg>
+              </button>
+              <button type="button" onClick={() => moveShot(1)} aria-label={t.projects.nextShot}>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7" /></svg>
+              </button>
+            </div>
+          )}
+          <button type="button" className={styles.viewerClose} onClick={() => viewer.current?.close()}>{t.projects.close}</button>
+        </div>
+      </dialog>
     </section>
   );
 }

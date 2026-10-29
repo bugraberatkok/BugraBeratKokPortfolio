@@ -122,8 +122,20 @@ export const en = {
           "PostgreSQL"
         ],
         "github": "https://github.com/bugraberatkok/SmartChoresTracker",
-        "image": "/projects/smart-chores-tracker.png",
-        "imageAlt": "A household member’s daily chore dashboard in Smart Chores Tracker, with points, streak and a weekly calendar",
+        "images": [
+          {
+            "src": "/projects/smart-chores-tracker-1.png",
+            "alt": "A household member’s daily chore dashboard in Smart Chores Tracker, with points, streak and a weekly calendar"
+          },
+          {
+            "src": "/projects/smart-chores-tracker-2.png",
+            "alt": "Weekly progress chart with completed chores and total points"
+          },
+          {
+            "src": "/projects/smart-chores-tracker-3.png",
+            "alt": "Badge cabinet with earned and upcoming achievements"
+          }
+        ],
         "category": "Capstone",
         "shortTitle": "Smart Chores Tracker",
         "highlights": [
@@ -203,8 +215,20 @@ export const en = {
           "H2"
         ],
         "github": "https://github.com/bugraberatkok/fitness-web-app",
-        "image": "/projects/fittrack.png",
-        "imageAlt": "FitTrack dashboard with the day’s calorie summary, a progress ring and recent activity",
+        "images": [
+          {
+            "src": "/projects/fittrack-1.png",
+            "alt": "FitTrack dashboard with the day’s calorie summary, a progress ring and recent activity"
+          },
+          {
+            "src": "/projects/fittrack-2.png",
+            "alt": "Weekly workout calendar and logged exercises"
+          },
+          {
+            "src": "/projects/fittrack-3.png",
+            "alt": "Meal log with calorie totals"
+          }
+        ],
         "category": "Fitness & nutrition",
         "shortTitle": "FitTrack",
         "highlights": [
@@ -224,7 +248,12 @@ export const en = {
     "rewards": "Rewards",
     "deploymentLabel": "Delivery",
     "prev": "Previous project",
-    "next": "Next project"
+    "next": "Next project",
+    "screenshot": "Screenshot",
+    "enlarge": "Enlarge screenshot",
+    "prevShot": "Previous screenshot",
+    "nextShot": "Next screenshot",
+    "close": "Close"
   },
   "experience": {
     "title": "Experience",

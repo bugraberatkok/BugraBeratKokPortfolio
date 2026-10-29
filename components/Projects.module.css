@@ -58,6 +58,55 @@
   background: var(--night);
 }
 .media img { object-fit: cover; object-position: top; }
+.mediaButton { position: absolute; inset: 0; padding: 0; border: 0; background: none; cursor: zoom-in; }
+.mediaButton:focus-visible { outline: 3px solid var(--lamp); outline-offset: -3px; }
+
+/* Screenshot dots sit on a dark pill so they read on light and dark screenshots alike. */
+.shots {
+  position: absolute;
+  left: 50%;
+  bottom: 12px;
+  display: flex;
+  gap: 6px;
+  padding: 6px 8px;
+  border-radius: var(--radius-pill);
+  background: rgba(31, 26, 51, .72);
+  transform: translateX(-50%);
+}
+.shotDot { width: 8px; height: 8px; padding: 0; border: 0; border-radius: var(--radius-pill); background: rgba(250, 249, 253, .55); cursor: pointer; transition: width .25s, background-color .25s; }
+.shotDot[aria-pressed="true"] { width: 22px; background: var(--lamp); }
+.shotDot:focus-visible { outline: 2px solid var(--lamp); outline-offset: 2px; }
+
+/* Full-size viewer */
+.viewer {
+  width: min(1200px, 94vw);
+  max-height: 94vh;
+  margin: auto;
+  padding: 0;
+  overflow: auto;
+  border: 1px solid var(--night-line);
+  border-radius: var(--radius-md);
+  background: var(--night);
+  color: var(--paper);
+}
+.viewer::backdrop { background: rgba(15, 12, 28, .82); }
+.viewerFigure { margin: 0; }
+.viewerImage { display: block; width: 100%; height: auto; }
+.viewerCaption { display: flex; justify-content: space-between; gap: 16px; padding: 14px 20px 0; font-size: 15px; color: var(--mist); }
+.viewerBar { display: flex; align-items: center; justify-content: flex-end; gap: 12px; padding: 14px 20px 18px; }
+.viewerBar .controls { margin-right: auto; }
+.viewerClose {
+  min-height: 44px;
+  padding: 0 20px;
+  border: 1.5px solid var(--night-line);
+  border-radius: var(--radius-pill);
+  background: none;
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--paper);
+  cursor: pointer;
+}
+.viewerClose:hover { border-color: var(--lamp); color: var(--lamp); }
 
 .category { font-size: 14px; font-weight: 600; color: var(--iris-soft); }
 .active .category { color: var(--lilac); }
