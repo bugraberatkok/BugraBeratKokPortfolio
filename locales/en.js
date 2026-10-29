@@ -199,6 +199,16 @@ export const en = {
           "SDL2"
         ],
         "github": "https://github.com/bugraberatkok/Focus-GameEngine-and-Two-Playable-Games",
+        "images": [
+          {
+            "src": "/projects/focus-1.webp",
+            "alt": "Apple Collector gameplay: the player collects apples that match its colour to score points"
+          },
+          {
+            "src": "/projects/focus-2.webp",
+            "alt": "Cat Chase gameplay: the cat catches mice while escaping the dogs on its tail"
+          }
+        ],
         "category": "C++ · Game engine",
         "shortTitle": "Focus Game Engine",
         "highlights": [

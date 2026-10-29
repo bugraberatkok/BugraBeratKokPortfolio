@@ -199,6 +199,16 @@ export const tr = {
           "SDL2"
         ],
         "github": "https://github.com/bugraberatkok/Focus-GameEngine-and-Two-Playable-Games",
+        "images": [
+          {
+            "src": "/projects/focus-1.webp",
+            "alt": "Apple Collector oynanışı: oyuncu kendi rengindeki elmaları toplayıp puan kazanıyor"
+          },
+          {
+            "src": "/projects/focus-2.webp",
+            "alt": "Cat Chase oynanışı: kedi peşindeki köpeklerden kaçarken fareleri yakalıyor"
+          }
+        ],
         "category": "C++ · Oyun motoru",
         "shortTitle": "Focus Oyun Motoru",
         "highlights": [
