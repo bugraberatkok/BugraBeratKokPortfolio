@@ -307,7 +307,7 @@ export const en = {
         "summary": "Building features for an AI assistant product for e-commerce businesses.",
         "description": [
           "Contribute to new features of Ailways’ AI assistant product, which lets e-commerce businesses set up, customize, and manage their own assistants from our panel.",
-          "Delivered a WordPress Multisite platform for a client, now in use: independent sites managed from one panel with a custom content plugin, live preview, and SEO tools.",
+          "Built and shipped a WordPress Multisite platform now used in production, managing independent sites from one panel with a custom content plugin, live preview, and SEO tools.",
           "Projects from this role: Şifa and the WordPress Multisite platform (see Projects)."
         ]
       },

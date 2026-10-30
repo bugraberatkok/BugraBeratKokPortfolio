@@ -307,7 +307,7 @@ export const tr = {
         "summary": "E-ticaret işletmelerine yönelik yapay zekâ asistanı ürününün yeni özelliklerini geliştiriyorum.",
         "description": [
           "E-ticaret işletmelerinin kendi asistanlarını panelimizden kurup özelleştirebildiği ve yönetebildiği yapay zekâ asistanı ürünümüzün yeni özelliklerinin geliştirilmesine katkı sağlıyorum.",
-          "Bir müşteri için WordPress Multisite platformu geliştirip teslim ettim ve platform şu an kullanımda: bağımsız siteler özel içerik eklentisi, canlı önizleme ve SEO araçlarıyla tek panelden yönetiliyor.",
+          "Geliştirdiğim WordPress Multisite platformu canlıya alındı ve aktif olarak kullanılıyor: bağımsız siteler, özel içerik eklentisi, canlı önizleme ve SEO araçlarıyla tek panelden yönetiliyor.",
           "Bu görevde geliştirdiğim projeler: Şifa ve WordPress Multisite platformu (Projeler bölümünde)."
         ]
       },
