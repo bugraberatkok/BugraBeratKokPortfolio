@@ -212,6 +212,20 @@ export const tr = {
           "Gemini"
         ],
         "github": "https://github.com/bugraberatkok/football-analyzer-ai",
+        "images": [
+          {
+            "src": "/projects/football-1.png",
+            "alt": "Galatasaray–Fenerbahçe analizi: Gemini, SportAPI üzerinden gelen Sofascore verisiyle iki takımın formunu yorumluyor"
+          },
+          {
+            "src": "/projects/football-2.png",
+            "alt": "xG, şut ve hızlı hücum metriklerinin karşılaştırması ve taktiksel maç öngörüsü"
+          },
+          {
+            "src": "/projects/football-3.png",
+            "alt": "Analiz sırasında akış: önce Sofascore verisi toplanıyor, ardından Gemini raporu yazıyor"
+          }
+        ],
         "category": "Maç analizi",
         "shortTitle": "Football Analyzer AI",
         "highlights": [

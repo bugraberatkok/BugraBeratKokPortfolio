@@ -212,6 +212,20 @@ export const en = {
           "Gemini"
         ],
         "github": "https://github.com/bugraberatkok/football-analyzer-ai",
+        "images": [
+          {
+            "src": "/projects/football-1.png",
+            "alt": "Galatasaray vs Fenerbahçe analysis: Gemini reads both teams' form from Sofascore data fetched through SportAPI"
+          },
+          {
+            "src": "/projects/football-2.png",
+            "alt": "xG, shot and fast-break comparison followed by the tactical match outlook"
+          },
+          {
+            "src": "/projects/football-3.png",
+            "alt": "While analysing: Sofascore data is collected first, then Gemini writes the report"
+          }
+        ],
         "category": "Match analysis",
         "shortTitle": "Football Analyzer AI",
         "highlights": [
