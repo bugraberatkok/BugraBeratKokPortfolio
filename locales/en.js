@@ -14,7 +14,7 @@ export const en = {
     "greeting": "Hi, I am",
     "name": "Buğra Berat Kök",
     "title": "Software Engineering Student and Full-Stack Developer",
-    "tagline": "I build full-stack applications, backend systems, and AI integrations with software architecture at the center.",
+    "tagline": "I build full-stack applications and backend systems with software architecture at the center.",
     "viewWork": "Explore projects",
     "downloadResume": "Download resume",
     "photoAlt": "Portrait of Buğra Berat Kök",

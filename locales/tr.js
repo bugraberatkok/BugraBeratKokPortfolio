@@ -14,7 +14,7 @@ export const tr = {
     "greeting": "Merhaba, ben",
     "name": "Buğra Berat Kök",
     "title": "Yazılım Mühendisliği Öğrencisi ve Full-Stack Geliştirici",
-    "tagline": "Yazılım mimarisini merkeze alarak full-stack uygulamalar, backend sistemleri ve yapay zekâ entegrasyonları geliştiriyorum.",
+    "tagline": "Yazılım mimarisini merkeze alarak full-stack uygulamalar ve backend sistemleri geliştiriyorum.",
     "viewWork": "Projeleri keşfet",
     "downloadResume": "Özgeçmişi indir",
     "photoAlt": "Buğra Berat Kök’ün fotoğrafı",
