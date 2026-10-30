@@ -249,6 +249,10 @@ export const tr = {
           {
             "src": "/projects/focus-2.webp",
             "alt": "Cat Chase oynanışı: kedi peşindeki köpeklerden kaçarken fareleri yakalıyor"
+          },
+          {
+            "src": "/projects/focus-layers-tr.png",
+            "alt": "Focus motorunun katmanları (oyun, motor, SDL2, işletim sistemi, donanım) ve motordaki 12 yöneticinin görevleri"
           }
         ],
         "category": "C++ · Oyun motoru",

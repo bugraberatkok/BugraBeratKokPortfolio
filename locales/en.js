@@ -249,6 +249,10 @@ export const en = {
           {
             "src": "/projects/focus-2.webp",
             "alt": "Cat Chase gameplay: the cat catches mice while escaping the dogs on its tail"
+          },
+          {
+            "src": "/projects/focus-layers-en.png",
+            "alt": "Focus engine layers (game, engine, SDL2, operating system, hardware) and what each of the 12 engine managers does"
           }
         ],
         "category": "C++ · Game engine",
